@@ -2,128 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Evergreen Home Healthcare</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Evergreen Home Healthcare Services</title>
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9f9f9;
+      line-height: 1.6;
+      background-color: #ffffff;
       color: #333;
     }
-    header {
-      background: #2c7a7b;
+
+    header, footer {
+      background-color: #00695c;
       color: white;
-      padding: 2rem;
       text-align: center;
-      background-image: url('https://source.unsplash.com/1600x400/?assisted-living');
-      background-size: cover;
-      background-position: center;
-    }
-    header h1 {
-      background-color: rgba(0, 0, 0, 0.5);
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      background: #285e61;
       padding: 1rem;
     }
+
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: 600;
+      margin: 0 15px;
     }
-    .hero {
-      padding: 3rem 2rem;
-      background: #edf2f7;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      color: #2c7a7b;
-    }
-    .section {
+
+    section {
       padding: 2rem;
-      max-width: 900px;
-      margin: auto;
     }
-    .section h2 {
-      color: #2c7a7b;
+
+    img {
+      max-width: 100%;
     }
-    .section img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
+
+    .testimonial img {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+    }
+
+    .gallery img {
       border-radius: 10px;
+      width: 300px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "• ";
+      color: #00796b;
+      font-weight: bold;
+    }
+
+    a.button {
+      display: inline-block;
+      background-color: #00796b;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
       margin-top: 1rem;
     }
-    footer {
-      background: #2c7a7b;
-      color: white;
-      text-align: center;
-      padding: 2rem;
+
+    @media (max-width: 600px) {
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Evergreen Home Healthcare</h1>
-    <p>Compassionate Assisted Living in Coon Rapids, MN</p>
-  </header>
 
+<header>
+  <h1>Evergreen Home Healthcare Services</h1>
   <nav>
-    <a href="#about">About Us</a>
-    <a href="#services">Services</a>
-    <a href="#team">Our Team</a>
-    <a href="#contact">Contact</a>
+    <a href="#testimonial">Testimonial</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#mission">Our Values</a>
+    <a href="mailto:evergreenhomehcs@gmail.com">Contact</a>
   </nav>
+</header>
 
-  <div class="hero">
-    <h1>Where Comfort Meets Compassion</h1>
-    <p>Your loved one's wellbeing is our top priority. We offer personalized care in a warm, supportive environment.</p>
+<section id="intro">
+  <h2>Welcome to Evergreen</h2>
+  <p>We provide compassionate, high-quality care to residents in a safe, home-like environment.</p>
+</section>
+
+<section id="testimonial" class="testimonial" style="background-color: #f9f9f9; text-align: center;">
+  <h2>What Families Are Saying</h2>
+  <div>
+    <img src="images/testimonial-wife.jpg" alt="Wife of Former Resident" />
+    <blockquote>
+      “Evergreen took care of my husband with compassion, dignity, and love. The staff treated us like family and gave me peace of mind every day.”
+    </blockquote>
+    <p><strong>– Susan M., wife of a former resident</strong></p>
   </div>
+</section>
 
-  <section id="about" class="section">
-    <h2>About Evergreen</h2>
-    <p>Located in the heart of Coon Rapids, MN, Evergreen Home Healthcare is a premier assisted living facility dedicated to providing high-quality care for seniors and adults with disabilities. Our mission is to create a nurturing, safe, and engaging environment that promotes independence and dignity for every resident.</p>
-    <img src="https://source.unsplash.com/featured/?assisted-living,care" alt="Evergreen residents and staff">
-  </section>
+<section id="gallery">
+  <h2>Our Home in Pictures</h2>
+  <div class="gallery">
+    <img src="images/home1.jpg" alt="Resident Room" />
+    <img src="images/home2.jpg" alt="Living Room" />
+    <img src="images/home3.jpg" alt="Caregiver with Resident" />
+  </div>
+</section>
 
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <ul>
-      <li>24/7 Assisted Living Care</li>
-      <li>Medication Management</li>
-      <li>Meals & Nutrition Planning</li>
-      <li>Recreational & Social Activities</li>
-      <li>Transportation Assistance</li>
-      <li>Emergency Preparedness & Safety</li>
-    </ul>
-    <img src="https://source.unsplash.com/featured/?assisted-living,staff" alt="Caring staff at work">
-  </section>
+<section id="mission" style="background-color: #eef7f9;">
+  <h2>Our Mission, Vision & Values</h2>
 
-  <section id="team" class="section">
-    <h2>Meet Our Team</h2>
-    <p>Our staff includes licensed nurses, compassionate caregivers, and wellness coordinators—all committed to personalized and respectful care. We believe in building relationships based on trust, respect, and communication.</p>
-    <img src="https://source.unsplash.com/featured/?assisted-living,team" alt="Evergreen healthcare team">
-  </section>
+  <h3>Mission</h3>
+  <p>To provide compassionate, individualized care that enhances the quality of life for every resident we serve.</p>
 
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <p>Address: 2621 S Heights Dr NW, Coon Rapids, MN 55433</p>
-    <p>Phone: (763) 762-6115</p>
-    <p>Email: evergreenhomehcs@gmail.com</p>
-  </section>
+  <h3>Vision</h3>
+  <p>To be the most trusted and respected provider of assisted living services, known for excellence, integrity, and heart-centered care.</p>
 
-  <footer>
-    <p>&copy; 2025 Evergreen Home Healthcare. All rights reserved.</p>
-  </footer>
+  <h3>Values</h3>
+  <ul>
+    <li><strong>Compassion</strong> – We care deeply for our residents and their families.</li>
+    <li><strong>Respect</strong> – We honor the dignity of every individual.</li>
+    <li><strong>Excellence</strong> – We commit to the highest standards in everything we do.</li>
+    <li><strong>Integrity</strong> – We do the right thing, always.</li>
+    <li><strong>Family-Centered</strong> – We treat residents like our own family.</li>
+  </ul>
+</section>
+
+<section style="text-align: center;">
+  <h2>Have Questions?</h2>
+  <p>We’d love to hear from you. Let’s talk about how we can help your loved one feel at home.</p>
+  <a href="mailto:evergreenhomehcs@gmail.com" class="button">Email Us</a>
+</section>
+
+<footer>
+  <p>&copy; 2025 Evergreen Home Healthcare Services | <a href="mailto:evergreenhomehcs@gmail.com">evergreenhomehcs@gmail.com</a></p>
+</footer>
+
 </body>
 </html>
