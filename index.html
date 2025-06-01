@@ -176,6 +176,37 @@
     </blockquote>
   </div>
 </div>
+<!-- Evergreen Photo Slideshow Start -->
+<section id="slideshow" style="text-align:center; padding: 2rem;">
+  <h2>See Our Beautiful Home</h2>
+  <div style="max-width:800px; margin:auto; position:relative;">
+    <img class="mySlides" src="images/1_Evergreen_Curbview_Main.jpg" style="width:100%">
+    <img class="mySlides" src="images/2_Evergreen_Curbview_Side.jpg" style="width:100%">
+    <img class="mySlides" src="images/3_Evergreen_Dining_Table_Bright.jpg" style="width:100%">
+    <img class="mySlides" src="images/4_Evergreen_Dining_Table_Candles.jpg" style="width:100%">
+    <img class="mySlides" src="images/5_Evergreen_Kitchen_Sink.jpg" style="width:100%">
+    <img class="mySlides" src="images/6_Evergreen_Kitchen_Stove.jpg" style="width:100%">
+    <img class="mySlides" src="images/7_Evergreen_LivingRoom_Candles.jpg" style="width:100%">
+    <img class="mySlides" src="images/9_Evergreen_Patio_Main.jpg" style="width:100%">
+  </div>
+</section>
+
+<script>
+let slideIndex = 0;
+carousel();
+function carousel() {
+  let i;
+  let x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}    
+  x[slideIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000); // Change image every 4 seconds
+}
+</script>
+<!-- Evergreen Photo Slideshow End -->
 
 
 <section id="testimonial" class="testimonial" style="text-align: center;">
