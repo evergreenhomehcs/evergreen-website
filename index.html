@@ -4,6 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- PWA Meta Tags -->
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#2e7d32" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="/logo-1024.png">
+
+<!-- Google Analytics Tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9N7DMKYB3G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9N7DMKYB3G');
+</script>
+
   <title>Evergreen Home Healthcare Services</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
@@ -88,6 +104,11 @@
   </style>
 </head>
 <body>
+  <!-- PWA Install Banner -->
+<div class="pwa-banner" style="background-color:#e8f5e9; padding: 12px; text-align: center; font-weight: bold;">
+  📱 Now available as a mobile app! <a href="pwa.html" style="color:#2e7d32; text-decoration: underline;">Add us to your phone</a> for quick access to referrals, intakes, and job applications.
+</div>
+
 
 <header>
   <h1>Evergreen Home Healthcare Services</h1>
@@ -265,6 +286,13 @@ function carousel() {
 <footer>
   <p>&copy; 2025 Evergreen Home Healthcare Services | <a href="mailto:evergreenhomehcs@gmail.com" style="color: white;">evergreenhomehcs@gmail.com</a></p>
 </footer>
+<!-- Register Service Worker -->
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+    .catch(err => console.warn('Service Worker failed:', err));
+  }
+</script>
 
 </body>
 </html>
