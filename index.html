@@ -451,8 +451,18 @@
         </nav>
 
         <div class="header-cta" aria-label="Contact actions">
-          <a class="btn btn-secondary" href="tel:+13204697560" aria-label="Call Evergreen at 320-469-7560">Call (320) 469-7560</a>
-          <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer" aria-label="Submit a secure referral form">Secure Referral</a>
+          <a class="btn btn-secondary" href="tel:+13204697560"
+   aria-label="Call Evergreen at 320-469-7560"
+   onclick="gtag('event','call_click',{'event_category':'contact','event_label':'header_call'});">
+   Call (320) 469-7560
+</a>
+
+          <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer"
+   aria-label="Submit a secure referral form"
+   onclick="gtag('event','referral_click',{'event_category':'conversion','event_label':'header_secure_referral'});">
+   Secure Referral
+</a>
+
         </div>
       </div>
     </div>
@@ -481,9 +491,22 @@
             </div>
 
             <div class="hero-actions">
-              <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer">🔒 Submit Secure Referral</a>
-              <a class="btn btn-secondary" href="mailto:evergreenhomehcs@gmail.com?subject=Evergreen%20Tour%20Request">Request a Tour</a>
-              <a class="btn btn-secondary" href="tel:+13204697560">Call Now</a>
+              <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer"
+   onclick="gtag('event','referral_click',{'event_category':'conversion','event_label':'services_secure_referral'});">
+   🔒 Secure Referral Form
+</a>
+
+
+             <a class="btn btn-secondary" href="mailto:evergreenhomehcs@gmail.com?subject=Evergreen%20Tour%20Request"
+   onclick="gtag('event','tour_request',{'event_category':'conversion','event_label':'hero_email_tour'});">
+   Request a Tour
+</a>
+
+              <a class="btn btn-secondary" href="tel:+13204697560"
+   onclick="gtag('event','call_click',{'event_category':'contact','event_label':'hero_call_now'});">
+   Call Now
+</a>
+
             </div>
 
             <p class="lead" style="margin-top:12px;">
@@ -570,7 +593,11 @@
                   <a href="mailto:marie@evergreenhomehcs.com">marie@evergreenhomehcs.com</a>
                 </p>
                 <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                  <a class="btn btn-secondary" href="tel:+13204697560">Call</a>
+                 <a class="btn btn-secondary" href="tel:+13204697560"
+   onclick="gtag('event','call_click',{'event_category':'contact','event_label':'testimonial_call'});">
+   Call
+</a>
+
                   <a class="btn btn-secondary" href="mailto:evergreenhomehcs@gmail.com?subject=Evergreen%20Tour%20Request">Email</a>
                 </div>
               </div>
@@ -775,9 +802,21 @@
           <h2>Ready to Talk?</h2>
           <p class="lead">We’ll help you determine fit quickly and clearly — and move fast to prevent service gaps.</p>
           <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
-            <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer">Submit Secure Referral</a>
-            <a class="btn btn-secondary" href="tel:+13204697560">Call (320) 469-7560</a>
-            <a class="btn btn-secondary" href="mailto:evergreenhomehcs@gmail.com?subject=Evergreen%20Info%20Request">Email Us</a>
+            <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer"
+   onclick="gtag('event','referral_click',{'event_category':'conversion','event_label':'finalcta_secure_referral'});">
+   Submit Secure Referral
+</a>
+
+<a class="btn btn-secondary" href="tel:+13204697560"
+   onclick="gtag('event','call_click',{'event_category':'contact','event_label':'finalcta_call'});">
+   Call (320) 469-7560
+</a>
+
+<a class="btn btn-secondary" href="mailto:evergreenhomehcs@gmail.com?subject=Evergreen%20Info%20Request"
+   onclick="gtag('event','email_click',{'event_category':'contact','event_label':'finalcta_email'});">
+   Email Us
+</a>
+
           </div>
         </div>
       </div>
