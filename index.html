@@ -1,353 +1,833 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b5d3b" />
 
-  <!-- PWA Meta Tags -->
-  <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#2e7d32" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="apple-touch-icon" href="/logo-1024.png">
+  <title>Evergreen Home Healthcare Services | Assisted Living in Coon Rapids, MN</title>
+  <meta name="description" content="Evergreen Home Healthcare Services offers premium, small-home assisted living in Coon Rapids, MN. Private Pay first, CADI & BI waivers accepted. 5-bed capacity, RN-led oversight, 24/7 support, rapid assessments and admissions." />
 
-  <!-- Google Analytics Tag -->
+  <!-- Canonical (adjust if you use a different domain URL) -->
+  <link rel="canonical" href="https://www.evergreenhomehcs.com/" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/logo-1024.png" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- Social Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Evergreen Home Healthcare Services | Assisted Living in Coon Rapids, MN" />
+  <meta property="og:description" content="Premium small-home assisted living. Private Pay first. CADI & BI accepted. 5-bed capacity, RN-led oversight, 24/7 support, rapid assessments." />
+  <meta property="og:url" content="https://www.evergreenhomehcs.com/" />
+  <meta property="og:image" content="evergreen-promo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Evergreen Home Healthcare Services" />
+  <meta name="twitter:description" content="Premium small-home assisted living in Coon Rapids. Private Pay first. CADI & BI accepted. Rapid assessments." />
+  <meta name="twitter:image" content="evergreen-promo.png" />
+
+  <!-- Pinterest domain verify (kept) -->
+  <meta name="p:domain_verify" content="290b1cfb3ebcb3e7122c7ad4f098b5d3"/>
+
+  <!-- Google Analytics (kept) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N7DMKYB3G"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-9N7DMKYB3G');
+    gtag('config', 'G-9N7DMKYB3G', { anonymize_ip: true });
   </script>
 
-  <title>Evergreen Home Healthcare Services</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <meta name="description" content="Evergreen Home Healthcare Services — small, home-like assisted living in Coon Rapids, MN. Private Pay, CADI & BI accepted. Wheelchair ramp installed. Rapid assessments & admissions." />
+  <!-- Preload hero image to reduce LCP -->
+  <link rel="preload" as="image" href="evergreen-promo.png" />
+
   <style>
-    :root {
-      --brand: #00695c;
-      --brand-dark: #0b5d3b;
-      --accent: #00796b;
-      --bg: #f8f9fa;
-      --text: #333;
-      --card: #ffffff;
+    :root{
+      --brand: #0b5d3b;
+      --brand-2:#00695c;
+      --accent:#0f766e;
+      --bg:#f6f7f8;
+      --text:#132018;
+      --muted:#4b5563;
+      --card:#ffffff;
+      --border: rgba(0,0,0,.08);
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 14px;
+      --max: 1100px;
     }
-    * { box-sizing: border-box; }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-      background-color: var(--bg);
-      color: var(--text);
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      line-height:1.6;
+      color:var(--text);
+      background:var(--bg);
     }
-    header, footer {
-      background-color: var(--brand);
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
+    a{ color:inherit; }
+    img{ max-width:100%; height:auto; display:block; }
+    .sr-only{
+      position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+      overflow:hidden; clip:rect(0,0,0,0); border:0;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      white-space: nowrap;
+    .skip-link{
+      position:absolute; left:-999px; top:10px;
+      background:#fff; color:#000; padding:10px 12px; border-radius:10px;
+      box-shadow:var(--shadow);
+      z-index:9999;
     }
-    section {
-      padding: 2rem;
-      background: var(--card);
-      margin: 20px auto;
-      max-width: 1000px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border-radius: 8px;
+    .skip-link:focus{ left:10px; outline:2px solid var(--accent); }
+
+    /* Layout helpers */
+    .container{ max-width:var(--max); margin:0 auto; padding:0 16px; }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
     }
-    img { max-width: 100%; height: auto; }
-    .testimonial img {
-      width: 100px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
+    .section{ padding:28px 0; }
+    .grid{
+      display:grid;
+      gap:16px;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:12px;
+      border:1px solid transparent;
+      text-decoration:none;
+      font-weight:700;
+      letter-spacing:.2px;
+      cursor:pointer;
+      white-space:nowrap;
     }
-    .gallery img {
-      border-radius: 10px;
-      display: block;
-      width: 100%;
+    .btn-primary{ background:var(--brand); color:#fff; }
+    .btn-primary:hover{ filter:brightness(0.95); }
+    .btn-secondary{ background:#fff; border-color:var(--border); color:var(--text); }
+    .btn-secondary:hover{ background:#f3f4f6; }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 10px;
+      border-radius:999px;
+      background:#e8f5e9;
+      color:var(--brand);
+      font-weight:700;
+      font-size:.9rem;
     }
-    ul { list-style: none; padding: 0; }
-    ul li::before {
-      content: "• ";
-      color: var(--accent);
-      font-weight: bold;
+
+    /* Header */
+    header{
+      background:linear-gradient(180deg, var(--brand), #083f2a);
+      color:#fff;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      border-bottom:1px solid rgba(255,255,255,.15);
     }
-    a.button {
-      display: inline-block;
-      background-color: var(--accent);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 1rem;
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:12px 0;
+      flex-wrap:wrap;
     }
-    /* Slideshow */
-    .slides-wrap { max-width: 900px; margin: 0 auto; position: relative; }
-    .mySlides { display: none; border-radius: 12px; }
-    .caption {
-      position: absolute; left: 0; right: 0; bottom: 10px;
-      color: #fff; background: rgba(0,0,0,0.45);
-      padding: 8px 12px; border-radius: 8px; margin: 0 10px;
-      font-size: 0.95rem;
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      text-decoration:none;
+      min-width:240px;
     }
-    /* Accessibility section */
-    #accessibility .badge {
-      background: #e8f5e9; color: var(--brand-dark); font-weight: bold;
-      display: inline-block; padding: 6px 10px; border-radius: 999px;
-      margin-bottom: 10px;
+    .brand img{ width:44px; height:44px; border-radius:10px; background:#fff; padding:6px; }
+    .brand .name{ font-size:1.05rem; font-weight:800; line-height:1.2; }
+    .brand .tag{ font-size:.85rem; opacity:.9; font-weight:600; }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
     }
-    #accessibility .ramp-gallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
-    #accessibility .ramp-gallery img { width: 100%; height: auto; border-radius: 10px; }
-    .btn {
-      display: inline-block; padding: 10px 16px; border-radius: 8px;
-      text-decoration: none; background: var(--brand-dark); color: #fff;
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:650;
+      padding:8px 10px;
+      border-radius:10px;
     }
-    @media (max-width: 600px) {
-      nav { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+    nav a:hover, nav a:focus{
+      background:rgba(255,255,255,.12);
+      outline:none;
+    }
+    .header-cta{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+      min-width:260px;
+    }
+
+    /* Announcement */
+    .announce{
+      background:#e8f5e9;
+      color:#0b5d3b;
+      border-bottom:1px solid var(--border);
+    }
+    .announce .row{
+      display:flex; gap:10px; align-items:center; justify-content:space-between;
+      padding:10px 0;
+      flex-wrap:wrap;
+    }
+    .announce a{ color:#0b5d3b; font-weight:800; }
+
+    /* Hero */
+    .hero{
+      padding:26px 0 10px;
+    }
+    .hero-inner{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    .hero-left{
+      padding:20px;
+    }
+    .hero h1{
+      margin:8px 0 10px;
+      font-size: clamp(1.65rem, 3vw, 2.4rem);
+      line-height:1.15;
+      letter-spacing:-.4px;
+    }
+    .hero p{
+      margin:0 0 12px;
+      color:var(--muted);
+      font-size:1.05rem;
+    }
+    .hero .highlights{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin:12px 0 16px;
+    }
+    .hero-actions{
+      display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;
+    }
+    .hero-right{
+      overflow:hidden;
+      position:relative;
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      background:#fff;
+    }
+    .hero-right img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .hero-right .badge{
+      position:absolute;
+      left:12px; top:12px;
+      background:rgba(11,93,59,.92);
+      color:#fff;
+      padding:8px 10px;
+      border-radius:999px;
+      font-weight:800;
+      font-size:.9rem;
+    }
+
+    /* Trust strip */
+    .trust{
+      margin-top:14px;
+      padding:14px 16px;
+      display:grid;
+      gap:12px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .trust .item{
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:12px;
+      background:#fff;
+    }
+    .trust .item strong{ display:block; }
+    .trust .item span{ color:var(--muted); font-size:.95rem; }
+
+    /* Sections */
+    h2{ margin:0 0 10px; font-size:1.5rem; }
+    h3{ margin:14px 0 8px; font-size:1.15rem; }
+    .lead{ color:var(--muted); margin:0 0 12px; }
+
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+      align-items:start;
+    }
+    .pad{ padding:18px; }
+
+    /* Lists */
+    .checklist{ padding-left:0; margin:10px 0 0; list-style:none; }
+    .checklist li{
+      padding-left:30px;
+      position:relative;
+      margin:8px 0;
+    }
+    .checklist li::before{
+      content:"✓";
+      position:absolute;
+      left:0; top:0;
+      width:22px; height:22px;
+      display:grid; place-items:center;
+      border-radius:999px;
+      background:#e8f5e9;
+      color:var(--brand);
+      font-weight:900;
+    }
+
+    /* Slideshow (lightweight) */
+    .slider{
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      overflow:hidden;
+      background:#000;
+      position:relative;
+    }
+    .slider figure{
+      margin:0;
+      display:none;
+      position:relative;
+    }
+    .slider figure.active{ display:block; }
+    .slider figcaption{
+      position:absolute;
+      left:10px; right:10px; bottom:10px;
+      background:rgba(0,0,0,.50);
+      color:#fff;
+      padding:8px 10px;
+      border-radius:12px;
+      font-size:.95rem;
+    }
+
+    /* Gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap:12px;
+    }
+    .gallery img{
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:#fff;
+    }
+
+    /* Testimonial */
+    .quote{
+      display:grid;
+      gap:12px;
+      align-items:center;
+      text-align:center;
+    }
+    .avatar{
+      width:96px; height:96px;
+      border-radius:999px;
+      margin:0 auto;
+      border:3px solid #e8f5e9;
+      object-fit:cover;
+    }
+    blockquote{
+      margin:0;
+      font-size:1.05rem;
+      color:var(--text);
+    }
+    .byline{ color:var(--muted); font-weight:700; }
+
+    /* Footer */
+    footer{
+      background:#062e1f;
+      color:#fff;
+      padding:20px 0;
+      margin-top:18px;
+      border-top:1px solid rgba(255,255,255,.12);
+    }
+    footer a{ color:#fff; }
+
+    /* Focus */
+    :focus-visible{ outline:3px solid rgba(15,118,110,.55); outline-offset:3px; border-radius:10px; }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-inner{ grid-template-columns: 1fr; }
+      .trust{ grid-template-columns: 1fr 1fr; }
+      .two-col{ grid-template-columns: 1fr; }
+      .header-cta{ justify-content:center; width:100%; }
+      .brand{ min-width:auto; }
+    }
+    @media (max-width: 520px){
+      .trust{ grid-template-columns: 1fr; }
+      nav{ justify-content:flex-start; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior:auto; }
     }
   </style>
-  <meta name="p:domain_verify" content="290b1cfb3ebcb3e7122c7ad4f098b5d3"/>
+
+  <!-- Local Business Schema (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"AssistedLivingFacility",
+    "name":"Evergreen Home Healthcare Services",
+    "url":"https://www.evergreenhomehcs.com/",
+    "telephone":"+1-320-469-7560",
+    "email":"evergreenhomehcs@gmail.com",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"2621 S Heights Dr NW",
+      "addressLocality":"Coon Rapids",
+      "addressRegion":"MN",
+      "postalCode":"55433",
+      "addressCountry":"US"
+    },
+    "areaServed":[
+      "Anoka County, MN",
+      "Hennepin County, MN",
+      "Ramsey County, MN",
+      "Washington County, MN",
+      "Dakota County, MN",
+      "Sherburne County, MN",
+      "Wright County, MN"
+    ],
+    "description":"Premium small-home assisted living in Coon Rapids, MN. Private Pay first; CADI & BI waivers accepted. 5-bed capacity, RN-led oversight, 24/7 support, rapid assessments and admissions.",
+    "image":[
+      "https://www.evergreenhomehcs.com/evergreen-promo.png"
+    ]
+  }
+  </script>
 </head>
+
 <body>
-  <!-- PWA Install Banner -->
-  <div class="pwa-banner" style="background-color:#e8f5e9; padding: 12px; text-align: center; font-weight: bold;">
-    📱 Now available as a mobile app! <a href="pwa.html" style="color:#2e7d32; text-decoration: underline;">Add us to your phone</a> for quick access to referrals, intakes, and job applications.
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- PWA Announcement -->
+  <div class="announce" role="region" aria-label="Mobile app announcement">
+    <div class="container">
+      <div class="row">
+        <span><strong>📱 Now available as a mobile app!</strong> Add Evergreen to your phone for quick access to referrals, intakes, and job applications.</span>
+        <a href="pwa.html">Add to phone</a>
+      </div>
+    </div>
   </div>
 
   <header>
-    <h1>Evergreen Home Healthcare Services</h1>
-    <nav aria-label="Primary">
-      <a href="#accessibility">Accessibility</a>
-      <a href="#testimonial">Testimonial</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#mission">Our Values</a>
-      <a href="refer.html">Refer a Resident</a>
-      <a href="intake.html">Resident Intake Form</a>
-      <a href="careers.html">Careers</a>
-      <a href="mailto:evergreenhomehcs@gmail.com">Contact</a>
-    </nav>
+    <div class="container">
+      <div class="topbar">
+        <a class="brand" href="#top" aria-label="Evergreen Home Healthcare Services home">
+          <img src="evergreen-logo.png" alt="Evergreen logo" width="44" height="44" loading="eager" />
+          <div>
+            <div class="name">Evergreen Home Healthcare Services</div>
+            <div class="tag">Quality Care in a Home-Like Setting</div>
+          </div>
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <a href="#services">Services</a>
+          <a href="#accessibility">Accessibility</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#testimonial">Testimonial</a>
+          <a href="#values">Values</a>
+          <a href="refer.html">Refer a Resident</a>
+          <a href="intake.html">Resident Intake</a>
+          <a href="careers.html">Careers</a>
+        </nav>
+
+        <div class="header-cta" aria-label="Contact actions">
+          <a class="btn btn-secondary" href="tel:+13204697560" aria-label="Call Evergreen at 320-469-7560">Call (320) 469-7560</a>
+          <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer" aria-label="Submit a secure referral form">Secure Referral</a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <section id="intro">
-    <h2>Welcome to Evergreen</h2>
-    <p>We provide compassionate, high-quality care to residents in a safe, home-like environment.</p>
-  </section>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="card hero-left">
+            <span class="pill">Premium small-home assisted living • 5-bed capacity</span>
+            <h1>Private Pay–First Assisted Living in Coon Rapids, MN — With Rapid Admissions</h1>
+            <p>
+              Evergreen is a <strong>5-bed, home-like setting</strong> designed for residents who benefit from a calm environment,
+              consistent staffing, and high-touch support. We prioritize <strong>Private Pay</strong> and also accept
+              <strong>CADI & BI waivers</strong> (EW supportive as available).
+            </p>
 
-  <section id="promo-banner" style="text-align:center; padding: 2rem;">
-    <img src="evergreen-promo.png"
-         alt="Evergreen Home Healthcare Services promotional banner"
-         style="width:100%; max-width:900px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);" />
-  </section>
+            <div class="highlights" aria-label="Key highlights">
+              <span class="pill">RN-led oversight</span>
+              <span class="pill">24/7 support</span>
+              <span class="pill">Medication management</span>
+              <span class="pill">Wheelchair ramp</span>
+              <span class="pill">Rapid assessment</span>
+            </div>
 
-  <section id="services" style="text-align:center; padding: 2em;">
-    <img src="evergreen-logo.png" alt="Evergreen Home Healthcare Logo" width="150">
-    <h2>Welcome to Evergreen Home Healthcare Services</h2>
-    <p>Where comfort meets compassionate care in a safe, home-like setting for older adults.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer">🔒 Submit Secure Referral</a>
+              <a class="btn btn-secondary" href="mailto:evergreenhomehcs@gmail.com?subject=Evergreen%20Tour%20Request">Request a Tour</a>
+              <a class="btn btn-secondary" href="tel:+13204697560">Call Now</a>
+            </div>
 
-    <h3>Our Core Services:</h3>
-    <ul style="list-style-type:none; padding:0;">
-      <li>✅ Personalized, Resident-Centered Care Plans</li>
-      <li>✅ RN-Led Oversight & Medication Management</li>
-      <li>✅ 24/7 Support with Compassionate Staff</li>
-      <li>✅ Full ADL/IADL Assistance (Bathing, Dressing, Transfers)</li>
-      <li>✅ Hospice and Behavioral Health Support</li>
-      <li>✅ Social, Recreational, and Culturally Respectful Activities</li>
-    </ul>
+            <p class="lead" style="margin-top:12px;">
+              Serving families across <strong>Anoka, Hennepin, Ramsey, Washington, Dakota, Sherburne, and Wright</strong> counties
+              with a simple goal: <strong>safe placement without delays</strong>.
+            </p>
+          </div>
 
-    <h3>Accepted Payers:</h3>
-    <p>Private Pay | Long-Term Care Insurance | CADI & BI Waivers</p>
+          <div class="hero-right" aria-label="Evergreen promotional image">
+            <div class="badge">5-Bed Premium Setting</div>
+            <img
+              src="evergreen-promo.png"
+              alt="Evergreen Home Healthcare Services promotional banner"
+              width="1200"
+              height="675"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
 
-    <h3>Contact Us:</h3>
-    <p>Marie Saidy, Administrator | (320) 469-7560 |
-      <a href="mailto:marie@evergreenhomehcs.com">marie@evergreenhomehcs.com</a></p>
+        <div class="trust card" role="list" aria-label="Why families choose Evergreen">
+          <div class="item" role="listitem">
+            <strong>Private Pay First</strong>
+            <span>Clear, direct admissions process</span>
+          </div>
+          <div class="item" role="listitem">
+            <strong>CADI & BI Accepted</strong>
+            <span>Supportive waiver placement</span>
+          </div>
+          <div class="item" role="listitem">
+            <strong>5-Bed Capacity</strong>
+            <span>More attention, stability, and supervision</span>
+          </div>
+          <div class="item" role="listitem">
+            <strong>Rapid Assessments</strong>
+            <span>Fast decisions to prevent service gaps</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      <a href="https://bit.ly/evergreen-referral"
-         target="_blank"
-         rel="noopener noreferrer"
-         style="font-size: 1.2em; font-weight: bold; color: green;"
-         aria-label="Open secure Evergreen referral form">
-        🔒 Submit a Secure Referral Form
-      </a>
-    </p>
-  </section>
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="two-col">
+          <div class="card pad">
+            <h2>Services Built Around Safety, Dignity, and Consistency</h2>
+            <p class="lead">
+              We support residents who need reliable daily structure, care coordination, and a peaceful environment.
+            </p>
+            <ul class="checklist">
+              <li><strong>Resident-centered care plans</strong> tailored to needs and routines</li>
+              <li><strong>RN-led oversight</strong> and care coordination</li>
+              <li><strong>Medication management</strong> and monitoring</li>
+              <li><strong>ADL/IADL support</strong> (bathing, dressing, transfers, meals)</li>
+              <li><strong>Hospice coordination</strong> and supportive behavioral health collaboration</li>
+              <li><strong>Activities</strong> that are social, respectful, and culturally responsive</li>
+            </ul>
 
-  <!-- LinkedIn Embedded Featured Post -->
-  <section style="text-align: center; padding: 2rem;">
-    <h2>Featured on LinkedIn</h2>
-    <div style="max-width: 504px; margin: 0 auto;">
-      <iframe
-        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7331871369208492032"
-        height="360"
-        width="100%"
-        frameborder="0"
-        allowfullscreen
-        title="Embedded post">
-      </iframe>
-    </div>
-  </section>
+            <h3>Accepted Payers</h3>
+            <p class="lead" style="margin-bottom:0;">
+              <strong>Private Pay</strong> (primary) • <strong>Long-Term Care Insurance</strong> • <strong>CADI & BI Waivers</strong> (EW supportive)
+            </p>
+          </div>
 
-  <!-- Facebook Page Plugin -->
-  <div style="text-align: center; padding: 2rem;">
-    <h2>Follow Us on Facebook</h2>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous"
-      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0"
-      nonce="FBPluginEvergreen">
-    </script>
+          <div class="card pad">
+            <h2>Fast, Clear Next Steps</h2>
+            <p class="lead">Referral partners and families can get started in minutes.</p>
 
-    <div class="fb-page"
-      data-href="https://www.facebook.com/evergreenhomehcs/"
-      data-tabs="timeline"
-      data-width="500"
-      data-height=""
-      data-small-header="false"
-      data-adapt-container-width="true"
-      data-hide-cover="false"
-      data-show-facepile="true">
-      <blockquote cite="https://www.facebook.com/evergreenhomehcs/"
-        class="fb-xfbml-parse-ignore">
-        <a href="https://www.facebook.com/evergreenhomehcs/">Evergreen Home Healthcare Services</a>
-      </blockquote>
-    </div>
-  </div>
+            <div class="grid" style="grid-template-columns:1fr; gap:12px;">
+              <div class="card" style="box-shadow:none; border:1px solid var(--border); padding:14px; border-radius:14px;">
+                <strong>1) Submit a secure referral</strong>
+                <p class="lead" style="margin:6px 0 10px;">HIPAA-conscious intake via secure form.</p>
+                <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer">🔒 Secure Referral Form</a>
+              </div>
 
-  <!-- Evergreen Slideshow (ramp images now included) -->
-  <section id="slideshow" style="text-align:center; padding: 2rem;">
-    <h2>See Our Beautiful Home</h2>
-    <div class="slides-wrap">
-      <!-- New: ramp images first -->
-      <figure class="mySlides">
-        <img src="images/ramp-01.jpg" alt="Wheelchair ramp at Evergreen front entrance" />
-        <figcaption class="caption">Wheelchair ramp at Evergreen — step-free access</figcaption>
-      </figure>
-      <figure class="mySlides">
-        <img src="images/ramp-02.jpg" alt="Side view of the accessible ramp with handrails" />
-        <figcaption class="caption">Accessible handrails and wide deck for safe transfers</figcaption>
-      </figure>
-      <figure class="mySlides">
-        <img src="images/ramp-03.jpg" alt="Ramp platform at the deck level" />
-        <figcaption class="caption">Level platform integrated with the deck</figcaption>
-      </figure>
+              <div class="card" style="box-shadow:none; border:1px solid var(--border); padding:14px; border-radius:14px;">
+                <strong>2) Call or email to schedule a tour</strong>
+                <p class="lead" style="margin:6px 0 10px;">
+                  Marie Saidy, Administrator • <a href="tel:+13204697560">(320) 469-7560</a> •
+                  <a href="mailto:marie@evergreenhomehcs.com">marie@evergreenhomehcs.com</a>
+                </p>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                  <a class="btn btn-secondary" href="tel:+13204697560">Call</a>
+                  <a class="btn btn-secondary" href="mailto:evergreenhomehcs@gmail.com?subject=Evergreen%20Tour%20Request">Email</a>
+                </div>
+              </div>
 
-      <!-- Existing home photos -->
-      <img class="mySlides" src="images/1_Evergreen_Curbview_Main.jpg" alt="Front curb view of Evergreen home">
-      <img class="mySlides" src="images/2_Evergreen_Curbview_Side.jpg" alt="Side curb view of Evergreen home">
-      <img class="mySlides" src="images/3_Evergreen_Dining_Table_Bright.jpg" alt="Dining area with bright natural light">
-      <img class="mySlides" src="images/4_Evergreen_Dining_Table_Candles.jpg" alt="Dining area with candles and decor">
-      <img class="mySlides" src="images/5_Evergreen_Kitchen_Sink.jpg" alt="Kitchen sink area">
-      <img class="mySlides" src="images/6_Evergreen_Kitchen_Stove.jpg" alt="Kitchen stove area">
-      <img class="mySlides" src="images/7_Evergreen_LivingRoom_Candles.jpg" alt="Living room with candles and seating">
-      <img class="mySlides" src="images/9_Evergreen_Patio_Main.jpg" alt="Patio with outdoor seating">
-    </div>
-  </section>
+              <div class="card" style="box-shadow:none; border:1px solid var(--border); padding:14px; border-radius:14px;">
+                <strong>3) Rapid assessment & decision</strong>
+                <p class="lead" style="margin:6px 0 0;">
+                  We move quickly to reduce discharge delays and service gaps.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <script>
-    let slideIndex = 0;
-    carousel();
-    function carousel() {
-      const slides = document.getElementsByClassName("mySlides");
-      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1; }
-      slides[slideIndex-1].style.display = "block";
-      setTimeout(carousel, 4000); // 4s per slide
-    }
-  </script>
+    <!-- ACCESSIBILITY -->
+    <section id="accessibility" class="section">
+      <div class="container">
+        <div class="two-col">
+          <div class="card pad">
+            <span class="pill">Accessibility</span>
+            <h2>Wheelchair Ramp + Step-Free Access</h2>
+            <p class="lead">
+              Evergreen supports residents who benefit from safer entry and smoother transfers. Our ramp helps reduce fall risk and improves access for mobility devices.
+            </p>
+            <ul class="checklist">
+              <li><strong>Wheelchair ramp installed</strong> for step-free access</li>
+              <li><strong>Handrails and stable decking</strong> for safer movement</li>
+              <li><strong>24/7 staffing</strong> for support and monitoring</li>
+            </ul>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+              <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer">Request Assessment</a>
+              <a class="btn btn-secondary" href="refer.html">Refer a Resident</a>
+            </div>
+          </div>
 
-  <!-- Testimonial -->
-  <section id="testimonial" class="testimonial" style="text-align: center;">
-    <h2>What Families Are Saying</h2>
-    <div>
-      <img src="images/testimonial-wife.jpg" alt="Wife of Former Resident" />
-      <blockquote>
-        “Evergreen took care of my husband with compassion, dignity, and love. The staff treated us like family and gave me peace of mind every day.”
-      </blockquote>
-      <p><strong>– Audrey Zurn, wife of a former resident</strong></p>
-    </div>
-  </section>
+          <div class="card pad">
+            <h2>Service Area</h2>
+            <p class="lead">
+              We serve families and referral partners throughout high-demand Twin Cities regions:
+              <strong>Anoka, Hennepin, Ramsey, Washington, Dakota, Sherburne, and Wright</strong> counties.
+            </p>
+            <p class="lead" style="margin-bottom:0;">
+              If you’re unsure whether a placement fits, submit a referral and we’ll respond quickly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Gallery -->
-  <section id="gallery" aria-label="Photo Gallery">
-    <h2>Our Home in Pictures</h2>
-    <div class="gallery">
-      <!-- New: a few ramp images appear here, too -->
-      <img src="images/ramp-04.jpg" alt="Ramp entry transition from driveway" />
-      <img src="images/ramp-05.jpg" alt="Ramp view from deck looking toward driveway" />
-      <img src="images/ramp-06.jpg" alt="Ramp handrail detail with vertical balusters" />
+    <!-- SLIDESHOW -->
+    <section class="section" aria-label="Evergreen photo slideshow">
+      <div class="container">
+        <div class="card pad">
+          <h2>See Our Home</h2>
+          <p class="lead">A calm, clean, home-like environment designed for comfort and safety.</p>
 
-      <img src="images/bedroom-1.jpg" alt="Resident bedroom with natural light" />
-      <img src="images/resident-room-wood-bed.jpg" alt="Resident bedroom with wood bed" />
-      <img src="images/resident-room-white-bed.jpg" alt="Resident bedroom with white bed" />
-      <img src="images/resident-room-pink-bedding.jpg" alt="Resident bedroom with pink bedding" />
-      <img src="images/resident-bathroom.jpg" alt="Resident bathroom" />
-      <img src="images/kitchen-modern.jpg" alt="Modern kitchen" />
-      <img src="images/dining-area.jpg" alt="Dining area" />
-      <img src="images/living-room-main.jpg" alt="Living room main view" />
-      <img src="images/living-room-alt.jpg" alt="Living room alternate view" />
-      <img src="images/common-area.jpg" alt="Common area and office" />
-    </div>
-  </section>
+          <div class="slider" id="slider" aria-live="polite">
+            <figure class="active">
+              <img src="images/ramp-01.jpg" alt="Wheelchair ramp at Evergreen front entrance" loading="lazy" decoding="async" />
+              <figcaption>Wheelchair ramp at Evergreen — step-free access</figcaption>
+            </figure>
+            <figure>
+              <img src="images/ramp-02.jpg" alt="Side view of the accessible ramp with handrails" loading="lazy" decoding="async" />
+              <figcaption>Accessible handrails and wide deck for safe transfers</figcaption>
+            </figure>
+            <figure>
+              <img src="images/ramp-03.jpg" alt="Ramp platform at the deck level" loading="lazy" decoding="async" />
+              <figcaption>Level platform integrated with the deck</figcaption>
+            </figure>
+            <figure>
+              <img src="images/1_Evergreen_Curbview_Main.jpg" alt="Front curb view of Evergreen home" loading="lazy" decoding="async" />
+              <figcaption>Front view of Evergreen</figcaption>
+            </figure>
+            <figure>
+              <img src="images/3_Evergreen_Dining_Table_Bright.jpg" alt="Dining area with bright natural light" loading="lazy" decoding="async" />
+              <figcaption>Bright dining area</figcaption>
+            </figure>
+            <figure>
+              <img src="images/7_Evergreen_LivingRoom_Candles.jpg" alt="Living room with seating and decor" loading="lazy" decoding="async" />
+              <figcaption>Warm, welcoming common space</figcaption>
+            </figure>
+            <figure>
+              <img src="images/9_Evergreen_Patio_Main.jpg" alt="Patio with outdoor seating" loading="lazy" decoding="async" />
+              <figcaption>Outdoor patio area</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Accessibility & Admissions -->
-  <section id="accessibility" aria-labelledby="accessibility-title">
-    <div class="badge" aria-hidden="true">Accessibility</div>
-    <h2 id="accessibility-title">Accessibility & Admissions</h2>
-    <p>Evergreen is a small, home-like assisted living in Coon Rapids with a <strong>wheelchair ramp installed</strong>, 24/7 staffing, medication management, and meal/ADL support. We accept <strong>Private Pay, CADI, and BI waivers</strong>, and complete <strong>rapid assessments</strong> to avoid service gaps.</p>
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="card pad">
+          <h2>Our Home in Pictures</h2>
+          <div class="gallery">
+            <img src="images/ramp-04.jpg" alt="Ramp entry transition from driveway" loading="lazy" decoding="async" />
+            <img src="images/ramp-05.jpg" alt="Ramp view from deck looking toward driveway" loading="lazy" decoding="async" />
+            <img src="images/ramp-06.jpg" alt="Ramp handrail detail with vertical balusters" loading="lazy" decoding="async" />
+            <img src="images/bedroom-1.jpg" alt="Resident bedroom with natural light" loading="lazy" decoding="async" />
+            <img src="images/resident-room-wood-bed.jpg" alt="Resident bedroom with wood bed" loading="lazy" decoding="async" />
+            <img src="images/resident-room-white-bed.jpg" alt="Resident bedroom with white bed" loading="lazy" decoding="async" />
+            <img src="images/resident-room-pink-bedding.jpg" alt="Resident bedroom with pink bedding" loading="lazy" decoding="async" />
+            <img src="images/resident-bathroom.jpg" alt="Resident bathroom" loading="lazy" decoding="async" />
+            <img src="images/kitchen-modern.jpg" alt="Modern kitchen" loading="lazy" decoding="async" />
+            <img src="images/dining-area.jpg" alt="Dining area" loading="lazy" decoding="async" />
+            <img src="images/living-room-main.jpg" alt="Living room main view" loading="lazy" decoding="async" />
+            <img src="images/living-room-alt.jpg" alt="Living room alternate view" loading="lazy" decoding="async" />
+            <img src="images/common-area.jpg" alt="Common area and office" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="ramp-gallery" role="list" aria-label="Wheelchair ramp photos">
-      <img src="images/ramp-07.jpg" alt="Ramp approach with wide deck and step-free threshold" role="listitem">
-      <img src="images/ramp-08.jpg" alt="Ramp platform level with deck for safe transfers" role="listitem">
-      <img src="images/ramp-09.jpg" alt="Ramp structure with handrails and support posts" role="listitem">
-      <img src="images/ramp-10.jpg" alt="Accessible outdoor area adjacent to ramp" role="listitem">
-    </div>
+    <!-- TESTIMONIAL -->
+    <section id="testimonial" class="section">
+      <div class="container">
+        <div class="card pad quote">
+          <h2>What Families Are Saying</h2>
+          <img class="avatar" src="images/testimonial-wife.jpg" alt="Audrey Zurn, family testimonial" loading="lazy" decoding="async" />
+          <blockquote>
+            “Evergreen took care of my husband with compassion, dignity, and love. The staff treated us like family and gave me peace of mind every day.”
+          </blockquote>
+          <div class="byline">— Audrey Zurn, wife of a former resident</div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:8px;">
+            <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer">Send Referral</a>
+            <a class="btn btn-secondary" href="tel:+13204697560">Call</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <p style="margin-top:1rem;"><a class="btn" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener">Request an assessment</a></p>
-  </section>
+    <!-- VALUES -->
+    <section id="values" class="section">
+      <div class="container">
+        <div class="card pad">
+          <h2>Mission, Vision & Values</h2>
 
-  <!-- Mission / Values -->
-  <section id="mission">
-    <h2>Our Mission, Vision & Values</h2>
-    <h3>Mission</h3>
-    <p>To provide compassionate, individualized care that enhances the quality of life for every resident we serve.</p>
-    <h3>Vision</h3>
-    <p>To be the most trusted and respected provider of assisted living services, known for excellence, integrity, and heart-centered care.</p>
-    <h3>Values</h3>
-    <ul>
-      <li><strong>Compassion</strong> – We care deeply for our residents and their families.</li>
-      <li><strong>Respect</strong> – We honor the dignity of every individual.</li>
-      <li><strong>Excellence</strong> – We commit to the highest standards in everything we do.</li>
-      <li><strong>Integrity</strong> – We do the right thing, always.</li>
-      <li><strong>Family-Centered</strong> – We treat residents like our own family.</li>
-    </ul>
-  </section>
+          <h3>Mission</h3>
+          <p class="lead">To provide compassionate, individualized care that enhances the quality of life for every resident we serve.</p>
 
-  <section style="text-align: center;">
-    <h2>Have Questions?</h2>
-    <p>We’d love to hear from you. Let’s talk about how we can help your loved one feel at home.</p>
-    <a href="mailto:evergreenhomehcs@gmail.com" class="button">Email Us</a>
-  </section>
+          <h3>Vision</h3>
+          <p class="lead">To be the most trusted and respected provider of assisted living services, known for excellence, integrity, and heart-centered care.</p>
+
+          <h3>Values</h3>
+          <ul class="checklist">
+            <li><strong>Compassion</strong> — We care deeply for residents and families.</li>
+            <li><strong>Respect</strong> — We honor dignity and choice.</li>
+            <li><strong>Excellence</strong> — We commit to high standards every day.</li>
+            <li><strong>Integrity</strong> — We do the right thing, always.</li>
+            <li><strong>Family-Centered</strong> — We treat residents like our own family.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL (lazy iframes) -->
+    <section class="section" aria-label="Social media">
+      <div class="container">
+        <div class="two-col">
+          <div class="card pad" style="text-align:center;">
+            <h2>Featured on LinkedIn</h2>
+            <iframe
+              title="Evergreen LinkedIn featured post"
+              src="https://www.linkedin.com/embed/feed/update/urn:li:share:7331871369208492032"
+              width="100%"
+              height="360"
+              loading="lazy"
+              style="border:0; border-radius:14px;"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="card pad" style="text-align:center;">
+            <h2>Follow Us on Facebook</h2>
+            <div id="fb-root"></div>
+            <div class="fb-page"
+              data-href="https://www.facebook.com/evergreenhomehcs/"
+              data-tabs="timeline"
+              data-width="500"
+              data-height=""
+              data-small-header="false"
+              data-adapt-container-width="true"
+              data-hide-cover="false"
+              data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/evergreenhomehcs/" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/evergreenhomehcs/">Evergreen Home Healthcare Services</a>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section" aria-label="Contact Evergreen">
+      <div class="container">
+        <div class="card pad" style="text-align:center;">
+          <h2>Ready to Talk?</h2>
+          <p class="lead">We’ll help you determine fit quickly and clearly — and move fast to prevent service gaps.</p>
+          <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer">Submit Secure Referral</a>
+            <a class="btn btn-secondary" href="tel:+13204697560">Call (320) 469-7560</a>
+            <a class="btn btn-secondary" href="mailto:evergreenhomehcs@gmail.com?subject=Evergreen%20Info%20Request">Email Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Evergreen Home Healthcare Services |
-      <a href="mailto:evergreenhomehcs@gmail.com" style="color: white;">evergreenhomehcs@gmail.com</a></p>
+    <div class="container" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center;">
+      <div>
+        <strong>Evergreen Home Healthcare Services</strong><br />
+        2621 S Heights Dr NW, Coon Rapids, MN 55433
+      </div>
+      <div style="text-align:right;">
+        <a href="tel:+13204697560">(320) 469-7560</a><br />
+        <a href="mailto:evergreenhomehcs@gmail.com">evergreenhomehcs@gmail.com</a><br />
+        <span style="opacity:.85;">© 2026 Evergreen Home Healthcare Services</span>
+      </div>
+    </div>
   </footer>
 
-  <!-- Register Service Worker -->
+  <!-- Lightweight slider script (no dependencies) -->
+  <script>
+    (function(){
+      const slider = document.getElementById('slider');
+      if(!slider) return;
+
+      const slides = Array.from(slider.querySelectorAll('figure'));
+      let i = 0;
+
+      function show(n){
+        slides.forEach((s, idx) => s.classList.toggle('active', idx === n));
+      }
+      show(0);
+
+      // Respect reduced motion
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(prefersReduced) return;
+
+      setInterval(() => {
+        i = (i + 1) % slides.length;
+        show(i);
+      }, 4200);
+    })();
+  </script>
+
+  <!-- Facebook SDK (deferred) -->
+  <script defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0">
+  </script>
+
+  <!-- Service Worker -->
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-      .catch(err => console.warn('Service Worker failed:', err));
+      navigator.serviceWorker.register('/service-worker.js').catch(() => {});
     }
   </script>
 </body>
