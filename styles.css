@@ -33,3 +33,24 @@ footer {
   background: #eee;
   margin-top: 2rem;
 }
+/* ===== HEADER LOGO FIX ===== */
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  display:block;
+}
+
+/* Prevent broken placeholder box */
+.logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
