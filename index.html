@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -10,14 +11,12 @@
   <meta name="description" content="Evergreen Home Healthcare Services offers compassionate small-home assisted living in Coon Rapids, Minnesota. Private pay, CADI, BI, EW, and long-term care insurance accepted. 24/7 support, RN-led oversight, secure fax referrals, rapid assessments, and a calm 5-bed home-like setting." />
   <link rel="canonical" href="https://www.evergreenhomehcs.com/" />
 
-  <!-- Favicons / PWA -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="/logo-1024.png" />
   <link rel="manifest" href="/manifest.json" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <!-- Social Preview -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Evergreen Home Healthcare Services | Assisted Living in Coon Rapids, MN" />
   <meta property="og:description" content="Premium small-home assisted living with 24/7 support, RN-led oversight, secure referral options, rapid assessments, and a calm 5-bed home-like setting." />
@@ -28,25 +27,25 @@
   <meta name="twitter:description" content="Premium small-home assisted living in Coon Rapids with secure referrals, rapid assessments, and RN-led oversight." />
   <meta name="twitter:image" content="https://www.evergreenhomehcs.com/evergreen-promo.png" />
 
-  <!-- Pinterest domain verify (kept) -->
   <meta name="p:domain_verify" content="290b1cfb3ebcb3e7122c7ad4f098b5d3" />
 
-  <!-- Google Analytics (kept) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N7DMKYB3G"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-9N7DMKYB3G', { anonymize_ip: true });
   </script>
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WF2QTET6GR"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('config', 'G-WF2QTET6GR');
   </script>
 
-  <!-- Performance hints -->
   <link rel="preload" as="image" href="images/resident-room-wood-bed.jpg" />
   <link rel="preload" as="image" href="logo.png" />
 
@@ -56,7 +55,7 @@
       --brand-dark:#062e1f;
       --brand-2:#0f766e;
       --gold:#c99a2e;
-      --cream:#fbf7ee;
+      --gold-2:#e4c56f;
       --bg:#f6f8f5;
       --ink:#102019;
       --muted:#53635b;
@@ -65,7 +64,6 @@
       --shadow:0 18px 60px rgba(6,46,31,.13);
       --shadow-soft:0 10px 30px rgba(6,46,31,.09);
       --radius:24px;
-      --radius-sm:16px;
       --max:1180px;
       --focus:0 0 0 4px rgba(15,118,110,.22);
     }
@@ -84,6 +82,7 @@
       text-rendering:optimizeLegibility;
       -webkit-font-smoothing:antialiased;
     }
+
     body.no-scroll{overflow:hidden;}
     a{color:inherit;}
     img{display:block;max-width:100%;height:auto;}
@@ -100,46 +99,157 @@
       position:relative;
       z-index:30;
     }
-    .announce .row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 0;flex-wrap:wrap;}
-    .announce a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.55);}
-    .announce small{opacity:.95;font-weight:650;}
+    .announce .row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:10px 0;
+      flex-wrap:wrap;
+    }
+    .announce a{
+      color:#fff;
+      text-decoration:none;
+      border-bottom:1px solid rgba(255,255,255,.55);
+      font-weight:900;
+    }
+    .announce small{opacity:.98;font-weight:700;}
 
     header{
-      position:sticky;top:0;z-index:25;
-      background:rgba(255,255,255,.88);
+      position:sticky;
+      top:0;
+      z-index:25;
+      background:rgba(255,255,255,.92);
       backdrop-filter:blur(18px);
       border-bottom:1px solid rgba(16,32,25,.10);
     }
-    .topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 0;}
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:265px;}
-    .brand img{width:50px;height:50px;border-radius:14px;background:#fff;padding:6px;box-shadow:0 8px 22px rgba(6,46,31,.12);}
-    .brand .name{font-weight:900;line-height:1.1;letter-spacing:-.02em;color:var(--brand-dark);}
-    .brand .tag{font-size:.84rem;color:var(--muted);font-weight:700;margin-top:2px;}
-    nav{display:flex;align-items:center;justify-content:center;gap:3px;flex-wrap:wrap;}
-    nav a{font-weight:800;text-decoration:none;color:#1a3025;padding:9px 10px;border-radius:999px;font-size:.94rem;}
-    nav a:hover,nav a:focus{background:#edf7ef;color:var(--brand);outline:none;}
-    .header-cta{display:flex;align-items:center;justify-content:flex-end;gap:9px;flex-wrap:wrap;}
+    .topbar{
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      align-items:center;
+      gap:18px;
+      padding:13px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      min-width:260px;
+    }
+    .brand img{
+      width:50px;
+      height:50px;
+      border-radius:14px;
+      background:#fff;
+      padding:6px;
+      box-shadow:0 8px 22px rgba(6,46,31,.12);
+    }
+    .brand .name{
+      font-weight:950;
+      line-height:1.08;
+      letter-spacing:-.02em;
+      color:var(--brand-dark);
+    }
+    .brand .tag{
+      font-size:.84rem;
+      color:var(--muted);
+      font-weight:800;
+      margin-top:2px;
+    }
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:3px;
+      flex-wrap:wrap;
+    }
+    nav a{
+      font-weight:850;
+      text-decoration:none;
+      color:#1a3025;
+      padding:9px 10px;
+      border-radius:999px;
+      font-size:.94rem;
+    }
+    nav a:hover,nav a:focus{
+      background:#edf7ef;
+      color:var(--brand);
+      outline:none;
+    }
+    .header-cta{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:9px;
+      flex-wrap:wrap;
+    }
 
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:9px;
-      min-height:44px;padding:12px 16px;border-radius:999px;border:1px solid transparent;
-      text-decoration:none;font-weight:900;letter-spacing:-.01em;cursor:pointer;white-space:nowrap;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      min-height:44px;
+      padding:12px 16px;
+      border-radius:999px;
+      border:1px solid transparent;
+      text-decoration:none;
+      font-weight:950;
+      letter-spacing:-.01em;
+      cursor:pointer;
+      white-space:nowrap;
       transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
     }
     .btn:hover{transform:translateY(-1px);}
     .btn:focus-visible{outline:none;box-shadow:var(--focus);}
-    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;box-shadow:0 14px 30px rgba(11,93,59,.24);}
+    .btn-primary{
+      background:linear-gradient(135deg,var(--brand),var(--brand-2));
+      color:#fff;
+      box-shadow:0 14px 30px rgba(11,93,59,.24);
+    }
     .btn-primary:hover{box-shadow:0 18px 40px rgba(11,93,59,.28);}
-    .btn-secondary{background:#fff;color:var(--brand-dark);border-color:rgba(16,32,25,.13);box-shadow:0 8px 20px rgba(6,46,31,.06);}
-    .btn-secondary:hover{background:#f7fbf8;border-color:rgba(11,93,59,.22);}
-    .btn-gold{background:linear-gradient(135deg,#e0bb5f,var(--gold));color:#1f1808;box-shadow:0 12px 28px rgba(201,154,46,.22);}
+    .btn-secondary{
+      background:#fff;
+      color:var(--brand-dark);
+      border-color:rgba(16,32,25,.13);
+      box-shadow:0 8px 20px rgba(6,46,31,.06);
+    }
+    .btn-secondary:hover{
+      background:#f7fbf8;
+      border-color:rgba(11,93,59,.22);
+    }
+    .btn-gold{
+      background:linear-gradient(135deg,var(--gold-2),var(--gold));
+      color:#1f1808;
+      box-shadow:0 12px 28px rgba(201,154,46,.22);
+    }
     .btn-soft{background:#e8f5e9;color:var(--brand);}
 
-    .hero{position:relative;overflow:hidden;padding:34px 0 18px;}
-    .hero::before{content:"";position:absolute;inset:-120px -80px auto auto;width:420px;height:420px;border-radius:999px;background:rgba(201,154,46,.14);filter:blur(3px);z-index:-1;}
-    .hero-grid{display:grid;grid-template-columns:minmax(0,1.03fr) minmax(360px,.97fr);gap:22px;align-items:stretch;}
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:34px 0 18px;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-120px -80px auto auto;
+      width:420px;
+      height:420px;
+      border-radius:999px;
+      background:rgba(201,154,46,.14);
+      filter:blur(3px);
+      z-index:-1;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.03fr) minmax(360px,.97fr);
+      gap:22px;
+      align-items:stretch;
+    }
     .hero-copy{
-      background:rgba(255,255,255,.78);
+      background:rgba(255,255,255,.80);
       border:1px solid rgba(255,255,255,.9);
       box-shadow:var(--shadow);
       border-radius:32px;
@@ -147,130 +257,739 @@
       position:relative;
       overflow:hidden;
     }
-    .hero-copy::after{content:"";position:absolute;right:-100px;bottom:-120px;width:280px;height:280px;border-radius:999px;background:rgba(15,118,110,.08);z-index:0;}
+    .hero-copy::after{
+      content:"";
+      position:absolute;
+      right:-100px;
+      bottom:-120px;
+      width:280px;
+      height:280px;
+      border-radius:999px;
+      background:rgba(15,118,110,.08);
+      z-index:0;
+    }
     .hero-copy > *{position:relative;z-index:1;}
-    .eyebrow{display:inline-flex;align-items:center;gap:9px;background:#ecf8ef;color:var(--brand);font-weight:900;padding:8px 12px;border-radius:999px;border:1px solid rgba(11,93,59,.12);font-size:.92rem;}
-    .eyebrow .dot{width:9px;height:9px;border-radius:999px;background:#16a34a;box-shadow:0 0 0 6px rgba(22,163,74,.13);}
-    h1{margin:16px 0 12px;font-size:clamp(2.15rem,5.2vw,4.55rem);line-height:.96;letter-spacing:-.065em;color:#082b1d;}
-    .hero-lead{font-size:clamp(1.05rem,1.6vw,1.22rem);color:#334238;margin:0 0 14px;max-width:68ch;}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 10px;}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      background:#ecf8ef;
+      color:var(--brand);
+      font-weight:950;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(11,93,59,.12);
+      font-size:.92rem;
+    }
+    .eyebrow .dot{
+      width:9px;
+      height:9px;
+      border-radius:999px;
+      background:#16a34a;
+      box-shadow:0 0 0 6px rgba(22,163,74,.13);
+    }
+    h1{
+      margin:16px 0 12px;
+      font-size:clamp(2.15rem,5.2vw,4.55rem);
+      line-height:.96;
+      letter-spacing:-.065em;
+      color:#082b1d;
+    }
+    .hero-lead{
+      font-size:clamp(1.05rem,1.6vw,1.22rem);
+      color:#334238;
+      margin:0 0 14px;
+      max-width:68ch;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:20px 0 10px;
+    }
+    .contact-mini{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:14px;
+    }
+    .mini-card{
+      padding:12px;
+      border-radius:16px;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow:0 8px 18px rgba(6,46,31,.05);
+      overflow-wrap:anywhere;
+    }
+    .mini-card strong{
+      display:block;
+      color:var(--brand);
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.11em;
+    }
+    .mini-card a,.mini-card span{
+      font-weight:900;
+      text-decoration:none;
+      color:#102019;
+      font-size:.95rem;
+    }
     .fax-callout{
-      margin-top:18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
-      padding:14px;border:1px solid rgba(201,154,46,.34);background:linear-gradient(135deg,#fff9e8,#ffffff);border-radius:18px;
+      margin-top:18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      padding:14px;
+      border:1px solid rgba(201,154,46,.34);
+      background:linear-gradient(135deg,#fff9e8,#ffffff);
+      border-radius:18px;
     }
     .fax-callout strong{display:block;color:#4a3304;}
-    .fax-callout span{color:#6c561b;font-weight:750;}
-    .copy-fax{border:0;background:#fff;border:1px solid rgba(201,154,46,.35);border-radius:999px;padding:9px 12px;font-weight:900;color:#5c430c;cursor:pointer;}
+    .fax-callout span{color:#6c561b;font-weight:800;}
+    .copy-fax{
+      border:0;
+      background:#fff;
+      border:1px solid rgba(201,154,46,.35);
+      border-radius:999px;
+      padding:9px 12px;
+      font-weight:950;
+      color:#5c430c;
+      cursor:pointer;
+    }
     .copy-fax:focus-visible{outline:none;box-shadow:var(--focus);}
 
-    .hero-media{position:relative;border-radius:32px;overflow:hidden;min-height:520px;box-shadow:var(--shadow);background:#0b5d3b;border:1px solid rgba(255,255,255,.9);}
-    .hero-media img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
-    .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,46,31,.05),rgba(6,46,31,.52));}
-    .hero-badge{position:absolute;left:18px;top:18px;z-index:2;background:rgba(255,255,255,.94);color:var(--brand-dark);border-radius:999px;padding:10px 14px;font-weight:950;box-shadow:0 12px 26px rgba(0,0,0,.14);}
-    .hero-card{position:absolute;left:18px;right:18px;bottom:18px;z-index:2;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.8);border-radius:24px;padding:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
-    .metric{padding:12px;border-radius:18px;background:#f7fbf8;border:1px solid rgba(16,32,25,.08);}
-    .metric strong{display:block;font-size:1.35rem;color:var(--brand);line-height:1;}
-    .metric span{display:block;color:var(--muted);font-size:.86rem;font-weight:800;margin-top:5px;}
+    .hero-media{
+      position:relative;
+      border-radius:32px;
+      overflow:hidden;
+      min-height:520px;
+      box-shadow:var(--shadow);
+      background:#0b5d3b;
+      border:1px solid rgba(255,255,255,.9);
+    }
+    .hero-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      position:absolute;
+      inset:0;
+    }
+    .hero-media::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,rgba(6,46,31,.05),rgba(6,46,31,.52));
+    }
+    .hero-badge{
+      position:absolute;
+      left:18px;
+      top:18px;
+      z-index:2;
+      background:rgba(255,255,255,.94);
+      color:var(--brand-dark);
+      border-radius:999px;
+      padding:10px 14px;
+      font-weight:950;
+      box-shadow:0 12px 26px rgba(0,0,0,.14);
+    }
+    .hero-card{
+      position:absolute;
+      left:18px;
+      right:18px;
+      bottom:18px;
+      z-index:2;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(14px);
+      border:1px solid rgba(255,255,255,.8);
+      border-radius:24px;
+      padding:18px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+    .metric{
+      padding:12px;
+      border-radius:18px;
+      background:#f7fbf8;
+      border:1px solid rgba(16,32,25,.08);
+    }
+    .metric strong{
+      display:block;
+      font-size:1.35rem;
+      color:var(--brand);
+      line-height:1;
+    }
+    .metric span{
+      display:block;
+      color:var(--muted);
+      font-size:.86rem;
+      font-weight:850;
+      margin-top:5px;
+    }
 
-    .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px;}
-    .trust-item{background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:var(--shadow-soft);}
-    .trust-item strong{display:block;color:#112b20;font-size:1rem;}
-    .trust-item span{display:block;color:var(--muted);font-size:.93rem;margin-top:4px;}
+    .trust-strip{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+      margin-top:18px;
+    }
+    .trust-item{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:16px;
+      box-shadow:var(--shadow-soft);
+    }
+    .trust-item strong{
+      display:block;
+      color:#112b20;
+      font-size:1rem;
+    }
+    .trust-item span{
+      display:block;
+      color:var(--muted);
+      font-size:.93rem;
+      margin-top:4px;
+    }
 
     .section{padding:42px 0;}
-    .section-header{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px;}
-    .section-kicker{color:var(--brand);font-weight:950;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;}
-    h2{margin:6px 0 0;font-size:clamp(1.75rem,3vw,2.6rem);line-height:1.05;letter-spacing:-.045em;color:#0b2f21;}
-    h3{margin:0 0 8px;font-size:1.18rem;color:#102019;}
+    .section-header{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:18px;
+    }
+    .section-kicker{
+      color:var(--brand);
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.78rem;
+    }
+    h2{
+      margin:6px 0 0;
+      font-size:clamp(1.75rem,3vw,2.6rem);
+      line-height:1.05;
+      letter-spacing:-.045em;
+      color:#0b2f21;
+    }
+    h3{
+      margin:0 0 8px;
+      font-size:1.18rem;
+      color:#102019;
+    }
     .lead{color:var(--muted);margin:0;}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-soft);}
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow-soft);
+    }
     .pad{padding:22px;}
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch;}
-    .three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-    .feature-card{padding:22px;border-radius:24px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-soft);position:relative;overflow:hidden;}
-    .feature-card::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--brand),var(--gold));}
-    .icon{width:44px;height:44px;border-radius:15px;background:#e8f5e9;color:var(--brand);display:grid;place-items:center;font-size:1.35rem;margin-bottom:12px;}
-    .checklist{padding:0;margin:14px 0 0;list-style:none;display:grid;gap:10px;}
-    .checklist li{position:relative;padding-left:32px;color:#26372f;}
-    .checklist li::before{content:"✓";position:absolute;left:0;top:.1rem;width:22px;height:22px;border-radius:999px;display:grid;place-items:center;background:#e8f5e9;color:var(--brand);font-weight:950;font-size:.86rem;}
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .three-col{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+    .feature-card{
+      padding:22px;
+      border-radius:24px;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow-soft);
+      position:relative;
+      overflow:hidden;
+    }
+    .feature-card::before{
+      content:"";
+      position:absolute;
+      inset:0 0 auto 0;
+      height:4px;
+      background:linear-gradient(90deg,var(--brand),var(--gold));
+    }
+    .icon{
+      width:44px;
+      height:44px;
+      border-radius:15px;
+      background:#e8f5e9;
+      color:var(--brand);
+      display:grid;
+      place-items:center;
+      font-size:1.35rem;
+      margin-bottom:12px;
+    }
+    .checklist{
+      padding:0;
+      margin:14px 0 0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+    .checklist li{
+      position:relative;
+      padding-left:32px;
+      color:#26372f;
+    }
+    .checklist li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:.1rem;
+      width:22px;
+      height:22px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:#e8f5e9;
+      color:var(--brand);
+      font-weight:950;
+      font-size:.86rem;
+    }
 
-    .process{counter-reset:step;display:grid;gap:12px;margin-top:14px;}
-    .process-item{counter-increment:step;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:16px;border-radius:20px;border:1px solid var(--line);background:#fff;}
-    .process-item::before{content:counter(step);width:34px;height:34px;border-radius:999px;background:var(--brand);color:#fff;font-weight:950;display:grid;place-items:center;}
+    .process{
+      counter-reset:step;
+      display:grid;
+      gap:12px;
+      margin-top:14px;
+    }
+    .process-item{
+      counter-increment:step;
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:12px;
+      align-items:start;
+      padding:16px;
+      border-radius:20px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+    .process-item::before{
+      content:counter(step);
+      width:34px;
+      height:34px;
+      border-radius:999px;
+      background:var(--brand);
+      color:#fff;
+      font-weight:950;
+      display:grid;
+      place-items:center;
+    }
 
-    .slider-wrap{position:relative;overflow:hidden;border-radius:28px;background:#071e15;box-shadow:var(--shadow);}
-    .slider{position:relative;min-height:560px;}
-    .slide{position:absolute;inset:0;opacity:0;transition:opacity .55s ease;}
-    .slide.active{opacity:1;z-index:1;}
-    .slide img{width:100%;height:100%;object-fit:cover;}
-    .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.70));}
-    .caption{position:absolute;left:20px;right:20px;bottom:20px;z-index:2;color:#fff;display:flex;align-items:end;justify-content:space-between;gap:18px;}
-    .caption strong{font-size:clamp(1.45rem,2.4vw,2.3rem);line-height:1.05;letter-spacing:-.04em;display:block;}
-    .caption span{display:block;opacity:.94;margin-top:4px;}
-    .slider-controls{position:absolute;top:18px;right:18px;z-index:4;display:flex;gap:8px;}
-    .slider-controls button,.gallery-nav button{width:42px;height:42px;border:0;border-radius:999px;background:rgba(255,255,255,.92);cursor:pointer;font-weight:950;box-shadow:0 12px 25px rgba(0,0,0,.16);}
-    .dots{position:absolute;left:20px;top:20px;z-index:4;display:flex;gap:8px;flex-wrap:wrap;max-width:70%;}
-    .dots button{width:10px;height:10px;border-radius:999px;border:0;background:rgba(255,255,255,.52);cursor:pointer;padding:0;}
-    .dots button.active{width:28px;background:#fff;}
+    .slider-wrap{
+      position:relative;
+      overflow:hidden;
+      border-radius:28px;
+      background:#071e15;
+      box-shadow:var(--shadow);
+    }
+    .slider{
+      position:relative;
+      min-height:560px;
+    }
+    .slide{
+      position:absolute;
+      inset:0;
+      opacity:0;
+      transition:opacity .55s ease;
+    }
+    .slide.active{
+      opacity:1;
+      z-index:1;
+    }
+    .slide img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .slide::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.70));
+    }
+    .caption{
+      position:absolute;
+      left:20px;
+      right:20px;
+      bottom:20px;
+      z-index:2;
+      color:#fff;
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:18px;
+    }
+    .caption strong{
+      font-size:clamp(1.45rem,2.4vw,2.3rem);
+      line-height:1.05;
+      letter-spacing:-.04em;
+      display:block;
+    }
+    .caption span{
+      display:block;
+      opacity:.94;
+      margin-top:4px;
+    }
+    .slider-controls{
+      position:absolute;
+      top:18px;
+      right:18px;
+      z-index:4;
+      display:flex;
+      gap:8px;
+    }
+    .slider-controls button,.gallery-nav button{
+      width:42px;
+      height:42px;
+      border:0;
+      border-radius:999px;
+      background:rgba(255,255,255,.92);
+      cursor:pointer;
+      font-weight:950;
+      box-shadow:0 12px 25px rgba(0,0,0,.16);
+    }
+    .dots{
+      position:absolute;
+      left:20px;
+      top:20px;
+      z-index:4;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      max-width:70%;
+    }
+    .dots button{
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      border:0;
+      background:rgba(255,255,255,.52);
+      cursor:pointer;
+      padding:0;
+    }
+    .dots button.active{
+      width:28px;
+      background:#fff;
+    }
 
-    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
-    .gallery button{border:0;padding:0;background:transparent;cursor:pointer;border-radius:18px;overflow:hidden;position:relative;box-shadow:0 10px 28px rgba(6,46,31,.10);}
-    .gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .25s ease;}
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+    .gallery button{
+      border:0;
+      padding:0;
+      background:transparent;
+      cursor:pointer;
+      border-radius:18px;
+      overflow:hidden;
+      position:relative;
+      box-shadow:0 10px 28px rgba(6,46,31,.10);
+    }
+    .gallery img{
+      width:100%;
+      aspect-ratio:4/3;
+      object-fit:cover;
+      transition:transform .25s ease;
+    }
     .gallery button:hover img{transform:scale(1.04);}
-    .gallery button::after{content:"View";position:absolute;right:10px;bottom:10px;background:rgba(255,255,255,.92);border-radius:999px;padding:5px 9px;font-size:.78rem;font-weight:950;color:var(--brand);opacity:0;transform:translateY(6px);transition:.2s ease;}
-    .gallery button:hover::after{opacity:1;transform:translateY(0);}
+    .gallery button::after{
+      content:"View";
+      position:absolute;
+      right:10px;
+      bottom:10px;
+      background:rgba(255,255,255,.92);
+      border-radius:999px;
+      padding:5px 9px;
+      font-size:.78rem;
+      font-weight:950;
+      color:var(--brand);
+      opacity:0;
+      transform:translateY(6px);
+      transition:.2s ease;
+    }
+    .gallery button:hover::after{
+      opacity:1;
+      transform:translateY(0);
+    }
 
-    .testimonial{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;background:linear-gradient(135deg,#fff,#f5fbf6);}
-    .avatar{width:118px;height:118px;border-radius:999px;object-fit:cover;border:5px solid #e8f5e9;box-shadow:0 14px 28px rgba(6,46,31,.12);}
-    blockquote{margin:0;font-size:1.25rem;line-height:1.45;color:#1d3026;letter-spacing:-.02em;}
-    .byline{margin-top:10px;color:var(--muted);font-weight:900;}
+    .testimonial{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:18px;
+      align-items:center;
+      background:linear-gradient(135deg,#fff,#f5fbf6);
+    }
+    .avatar{
+      width:118px;
+      height:118px;
+      border-radius:999px;
+      object-fit:cover;
+      border:5px solid #e8f5e9;
+      box-shadow:0 14px 28px rgba(6,46,31,.12);
+    }
+    blockquote{
+      margin:0;
+      font-size:1.25rem;
+      line-height:1.45;
+      color:#1d3026;
+      letter-spacing:-.02em;
+    }
+    .byline{
+      margin-top:10px;
+      color:var(--muted);
+      font-weight:900;
+    }
 
-    .cta-band{background:linear-gradient(135deg,var(--brand-dark),var(--brand));color:#fff;border-radius:32px;padding:30px;box-shadow:var(--shadow);position:relative;overflow:hidden;}
-    .cta-band::after{content:"";position:absolute;right:-100px;top:-130px;width:330px;height:330px;border-radius:999px;background:rgba(255,255,255,.09);}
+    .faq{display:grid;gap:10px;}
+    details{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+      box-shadow:0 8px 20px rgba(6,46,31,.05);
+    }
+    summary{
+      cursor:pointer;
+      font-weight:950;
+      color:#12271d;
+    }
+    details p{
+      color:var(--muted);
+      margin:10px 0 0;
+    }
+
+    .social-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    .embed-card{
+      text-align:center;
+      overflow:hidden;
+      min-height:430px;
+    }
+    .embed-card iframe{
+      width:100%;
+      border:0;
+      border-radius:18px;
+      background:#fff;
+    }
+
+    .facebook-fallback{
+      display:grid;
+      place-items:center;
+      min-height:360px;
+      margin-top:14px;
+    }
+    .fb-fallback-card{
+      width:100%;
+      max-width:430px;
+      margin:0 auto;
+      padding:28px;
+      border-radius:24px;
+      background:
+        radial-gradient(circle at top left, rgba(15,118,110,.12), transparent 45%),
+        linear-gradient(135deg,#ffffff,#f5fbf6);
+      border:1px solid rgba(16,32,25,.12);
+      box-shadow:0 14px 36px rgba(6,46,31,.10);
+      text-align:center;
+    }
+    .fb-fallback-card img{
+      margin:0 auto 14px;
+      border-radius:18px;
+      background:#fff;
+      padding:8px;
+      box-shadow:0 10px 24px rgba(6,46,31,.12);
+    }
+    .fb-fallback-card h3{
+      margin:0 0 8px;
+      color:#0b2f21;
+      font-size:1.35rem;
+    }
+    .fb-fallback-card p{
+      margin:0 0 18px;
+      color:var(--muted);
+    }
+    .fb-page{
+      margin-top:18px;
+      min-height:1px;
+    }
+
+    .cta-band{
+      background:linear-gradient(135deg,var(--brand-dark),var(--brand));
+      color:#fff;
+      border-radius:32px;
+      padding:30px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .cta-band::after{
+      content:"";
+      position:absolute;
+      right:-100px;
+      top:-130px;
+      width:330px;
+      height:330px;
+      border-radius:999px;
+      background:rgba(255,255,255,.09);
+    }
     .cta-band > *{position:relative;z-index:1;}
     .cta-band h2{color:#fff;}
     .cta-band .lead{color:rgba(255,255,255,.86);}
-    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px;}
-    .contact-card{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);border-radius:20px;padding:16px;color:#fff;text-decoration:none;}
-    .contact-card strong{display:block;font-size:.85rem;text-transform:uppercase;letter-spacing:.11em;opacity:.78;}
-    .contact-card span{display:block;font-weight:950;font-size:1.05rem;margin-top:6px;}
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+      margin-top:18px;
+    }
+    .contact-card{
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.20);
+      border-radius:20px;
+      padding:16px;
+      color:#fff;
+      text-decoration:none;
+      overflow-wrap:anywhere;
+    }
+    .contact-card strong{
+      display:block;
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.11em;
+      opacity:.78;
+    }
+    .contact-card span{
+      display:block;
+      font-weight:950;
+      font-size:.96rem;
+      margin-top:6px;
+    }
 
-    .faq{display:grid;gap:10px;}
-    details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 8px 20px rgba(6,46,31,.05);}
-    summary{cursor:pointer;font-weight:950;color:#12271d;}
-    details p{color:var(--muted);margin:10px 0 0;}
-
-    .social-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-    .embed-card{text-align:center;overflow:hidden;}
-    .embed-card iframe{width:100%;border:0;border-radius:18px;background:#fff;}
-
-    footer{background:#062e1f;color:#fff;margin-top:40px;padding:28px 0 88px;}
-    .footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:22px;align-items:start;}
+    footer{
+      background:#062e1f;
+      color:#fff;
+      margin-top:40px;
+      padding:28px 0 88px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.15fr 1fr .8fr;
+      gap:22px;
+      align-items:start;
+    }
     footer a{color:#fff;}
     footer .muted{color:rgba(255,255,255,.74);}
     .footer-links{display:grid;gap:8px;}
 
     .sticky-mobile{
-      position:fixed;left:12px;right:12px;bottom:12px;z-index:40;display:none;gap:8px;
-      background:rgba(255,255,255,.90);backdrop-filter:blur(18px);padding:9px;border:1px solid rgba(16,32,25,.10);border-radius:999px;box-shadow:0 18px 50px rgba(0,0,0,.18);
+      position:fixed;
+      left:12px;
+      right:12px;
+      bottom:12px;
+      z-index:40;
+      display:none;
+      gap:8px;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:blur(18px);
+      padding:9px;
+      border:1px solid rgba(16,32,25,.10);
+      border-radius:999px;
+      box-shadow:0 18px 50px rgba(0,0,0,.18);
     }
-    .sticky-mobile .btn{flex:1;min-height:42px;padding:9px 10px;font-size:.88rem;}
+    .sticky-mobile .btn{
+      flex:1;
+      min-height:42px;
+      padding:9px 10px;
+      font-size:.88rem;
+    }
 
-    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:80;display:none;align-items:center;justify-content:center;padding:20px;}
+    .lightbox{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.78);
+      z-index:80;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+    }
     .lightbox.open{display:flex;}
-    .lightbox-content{position:relative;max-width:min(1100px,96vw);max-height:92vh;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.45);}
-    .lightbox img{width:100%;max-height:78vh;object-fit:contain;background:#071e15;}
-    .lightbox-caption{padding:14px 18px;color:#102019;font-weight:850;}
-    .lightbox-close{position:absolute;right:12px;top:12px;width:42px;height:42px;border:0;border-radius:999px;background:rgba(255,255,255,.94);font-size:1.3rem;font-weight:950;cursor:pointer;}
-    .gallery-nav{position:absolute;left:12px;right:12px;top:50%;transform:translateY(-50%);display:flex;justify-content:space-between;pointer-events:none;}
+    .lightbox-content{
+      position:relative;
+      max-width:min(1100px,96vw);
+      max-height:92vh;
+      background:#fff;
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:0 30px 90px rgba(0,0,0,.45);
+    }
+    .lightbox img{
+      width:100%;
+      max-height:78vh;
+      object-fit:contain;
+      background:#071e15;
+    }
+    .lightbox-caption{
+      padding:14px 18px;
+      color:#102019;
+      font-weight:850;
+    }
+    .lightbox-close{
+      position:absolute;
+      right:12px;
+      top:12px;
+      width:42px;
+      height:42px;
+      border:0;
+      border-radius:999px;
+      background:rgba(255,255,255,.94);
+      font-size:1.3rem;
+      font-weight:950;
+      cursor:pointer;
+    }
+    .gallery-nav{
+      position:absolute;
+      left:12px;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      display:flex;
+      justify-content:space-between;
+      pointer-events:none;
+    }
     .gallery-nav button{pointer-events:auto;}
 
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease, transform .55s ease;}
-    .reveal.visible{opacity:1;transform:none;}
+    .reveal{
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .55s ease, transform .55s ease;
+    }
+    .reveal.visible{
+      opacity:1;
+      transform:none;
+    }
 
-    @media (max-width:1080px){
-      .topbar{align-items:flex-start;flex-wrap:wrap;}
-      nav{order:3;width:100%;justify-content:flex-start;}
+    @media (max-width:1120px){
+      .topbar{
+        grid-template-columns:1fr auto;
+        align-items:flex-start;
+      }
+      nav{
+        grid-column:1 / -1;
+        justify-content:flex-start;
+      }
       .hero-grid{grid-template-columns:1fr;}
       .hero-media{min-height:460px;}
       .gallery{grid-template-columns:repeat(3,1fr);}
@@ -281,7 +1000,9 @@
       .hero-copy{padding:22px;border-radius:26px;}
       .hero-media{min-height:420px;border-radius:26px;}
       .hero-card{grid-template-columns:1fr;}
-      .trust-strip,.three-col,.two-col,.contact-grid,.social-grid,.footer-grid{grid-template-columns:1fr;}
+      .trust-strip,.three-col,.two-col,.social-grid,.footer-grid{grid-template-columns:1fr;}
+      .contact-grid{grid-template-columns:1fr 1fr;}
+      .contact-mini{grid-template-columns:1fr;}
       .section-header{display:block;}
       .slider{min-height:430px;}
       .caption{display:block;}
@@ -300,14 +1021,18 @@
       .gallery{grid-template-columns:1fr;}
       .dots{max-width:58%;}
       .caption strong{font-size:1.35rem;}
+      .contact-grid{grid-template-columns:1fr;}
     }
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto;}
-      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
+      *,*::before,*::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        transition-duration:.01ms!important;
+      }
     }
   </style>
 
-  <!-- Local Business Schema (SEO) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -316,7 +1041,7 @@
     "url":"https://www.evergreenhomehcs.com/",
     "telephone":"+1-320-469-7560",
     "faxNumber":"+1-763-762-6132",
-    "email":"evergreenhomehcs@gmail.com",
+    "email":["evergreenhomehcs@gmail.com","marie@evergreenhomehcs.com"],
     "address":{
       "@type":"PostalAddress",
       "streetAddress":"2621 S Heights Dr NW",
@@ -342,6 +1067,7 @@
     ]
   }
   </script>
+
 </head>
 
 <body id="top">
@@ -367,23 +1093,26 @@
           </div>
         </a>
 
-        <nav aria-label="Primary navigation">
-          <a href="#services">Care &amp; Services</a>
-          <a href="#referrals">Referrals</a>
-          <a href="#tour">Photo Tour</a>
-          <a href="#families">Families</a>
-          <a href="#values">About</a>
-          <a href="refer.html">Refer</a>
-          <a href="intake.html">Intake</a>
-          <a href="careers.html">Careers</a>
-        </nav>
+```
+    <nav aria-label="Primary navigation">
+      <a href="#services">Care &amp; Services</a>
+      <a href="#referrals">Referrals</a>
+      <a href="#tour">Photo Tour</a>
+      <a href="#families">Families</a>
+      <a href="#values">About</a>
+      <a href="refer.html">Refer</a>
+      <a href="intake.html">Intake</a>
+      <a href="careers.html">Careers</a>
+    </nav>
 
-        <div class="header-cta" aria-label="Contact actions">
-          <a class="btn btn-secondary" href="tel:+13204697560" aria-label="Call Evergreen at 320-469-7560" onclick="trackEvent('call_click','contact','header_call');">Call</a>
-          <a class="btn btn-gold" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer" onclick="trackEvent('referral_click','conversion','header_secure_referral');">Secure Referral</a>
-        </div>
-      </div>
+    <div class="header-cta" aria-label="Contact actions">
+      <a class="btn btn-secondary" href="tel:+13204697560" aria-label="Call Evergreen at 320-469-7560" onclick="trackEvent('call_click','contact','header_call');">Call</a>
+      <a class="btn btn-gold" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer" onclick="trackEvent('referral_click','conversion','header_secure_referral');">Secure Referral</a>
     </div>
+  </div>
+</div>
+```
+
   </header>
 
   <main id="main">
@@ -399,331 +1128,394 @@
             <p class="hero-lead">
               We support families, case managers, social workers, and discharge planners with fast communication, secure referral pathways, RN-led oversight, and clear placement decisions.
             </p>
-            <div class="hero-actions" aria-label="Primary actions">
-              <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer" onclick="trackEvent('referral_click','conversion','hero_secure_referral');">🔒 Submit Secure Referral</a>
-              <a class="btn btn-secondary" href="mailto:marie@evergreenhomehcs.com?subject=Evergreen%20Tour%20or%20Placement%20Inquiry" onclick="trackEvent('email_click','contact','hero_email');">Email Marie</a>
-              <a class="btn btn-secondary" href="tel:+13204697560" onclick="trackEvent('call_click','contact','hero_call_now');">Call (320) 469-7560</a>
-            </div>
-            <div class="fax-callout" aria-label="Secure fax referral information">
-              <div>
-                <strong>Referral sources may send secure fax referrals</strong>
-                <span>Fax: (763) 762-6132</span>
-              </div>
-              <button class="copy-fax" type="button" data-copy="763-762-6132">Copy fax #</button>
-            </div>
-          </div>
 
-          <div class="hero-media reveal" aria-label="Evergreen resident bedroom photo">
-            <img src="images/resident-room-wood-bed.jpg" alt="Bright comfortable resident bedroom at Evergreen Home Healthcare Services in Coon Rapids" width="1200" height="900" loading="eager" decoding="async" />
-            <div class="hero-badge">5-Bed Premium Setting</div>
-            <div class="hero-card" aria-label="Evergreen highlights">
-              <div class="metric"><strong>24/7</strong><span>Staff support</span></div>
-              <div class="metric"><strong>RN</strong><span>Led oversight</span></div>
-              <div class="metric"><strong>Fast</strong><span>Referrals &amp; tours</span></div>
-            </div>
+```
+        <div class="hero-actions" aria-label="Primary actions">
+          <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer" onclick="trackEvent('referral_click','conversion','hero_secure_referral');">🔒 Submit Secure Referral</a>
+          <a class="btn btn-secondary" href="mailto:marie@evergreenhomehcs.com?cc=evergreenhomehcs@gmail.com&subject=Evergreen%20Tour%20or%20Placement%20Inquiry" onclick="trackEvent('email_click','contact','hero_email_marie');">Email Marie</a>
+          <a class="btn btn-secondary" href="tel:+13204697560" onclick="trackEvent('call_click','contact','hero_call_now');">Call (320) 469-7560</a>
+        </div>
+
+        <div class="contact-mini" aria-label="Evergreen email contacts">
+          <div class="mini-card">
+            <strong>Primary email</strong>
+            <a href="mailto:marie@evergreenhomehcs.com?cc=evergreenhomehcs@gmail.com&subject=Evergreen%20Tour%20or%20Placement%20Inquiry">marie@evergreenhomehcs.com</a>
+          </div>
+          <div class="mini-card">
+            <strong>General email</strong>
+            <a href="mailto:evergreenhomehcs@gmail.com?cc=marie@evergreenhomehcs.com&subject=Evergreen%20Inquiry">evergreenhomehcs@gmail.com</a>
           </div>
         </div>
 
-        <div class="trust-strip reveal" role="list" aria-label="Why families and referral partners choose Evergreen">
-          <div class="trust-item" role="listitem"><strong>Small 5-Bed Home</strong><span>More attention, comfort, and consistency.</span></div>
-          <div class="trust-item" role="listitem"><strong>Secure Referral Options</strong><span>Online referral and secure fax available.</span></div>
-          <div class="trust-item" role="listitem"><strong>RN-Led Oversight</strong><span>Professional coordination and medication support.</span></div>
-          <div class="trust-item" role="listitem"><strong>Fast Placement Review</strong><span>Quick tours, assessments, and clear decisions.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="section" aria-labelledby="services-title">
-      <div class="container">
-        <div class="section-header reveal">
+        <div class="fax-callout" aria-label="Secure fax referral information">
           <div>
-            <div class="section-kicker">Care &amp; services</div>
-            <h2 id="services-title">Built around safety, dignity, structure, and consistency.</h2>
+            <strong>Referral sources may send secure fax referrals</strong>
+            <span>Fax: (763) 762-6132</span>
           </div>
-          <p class="lead">Evergreen is designed for residents who benefit from a calm home, reliable staffing, and individualized daily support.</p>
-        </div>
-
-        <div class="three-col">
-          <article class="feature-card reveal">
-            <div class="icon" aria-hidden="true">♡</div>
-            <h3>Resident-Centered Daily Care</h3>
-            <p class="lead">Care plans are built around the resident’s needs, routines, preferences, safety risks, and level of independence.</p>
-            <ul class="checklist">
-              <li>Bathing, dressing, grooming, toileting, meals</li>
-              <li>Transfer and mobility support</li>
-              <li>Daily structure and monitoring</li>
-            </ul>
-          </article>
-          <article class="feature-card reveal">
-            <div class="icon" aria-hidden="true">⚕</div>
-            <h3>RN-Led Coordination</h3>
-            <p class="lead">Professional oversight supports medication management, health monitoring, provider communication, and care-plan updates.</p>
-            <ul class="checklist">
-              <li>Medication administration support</li>
-              <li>Monitoring and condition reporting</li>
-              <li>Hospice and provider coordination</li>
-            </ul>
-          </article>
-          <article class="feature-card reveal">
-            <div class="icon" aria-hidden="true">⌂</div>
-            <h3>Small-Home Environment</h3>
-            <p class="lead">A residential setting helps residents feel known, seen, and comfortable while supporting safety and supervision.</p>
-            <ul class="checklist">
-              <li>Peaceful home-like atmosphere</li>
-              <li>Accessible ramp entry</li>
-              <li>Respectful activities and routines</li>
-            </ul>
-          </article>
+          <button class="copy-fax" type="button" data-copy="763-762-6132">Copy fax #</button>
         </div>
       </div>
-    </section>
 
-    <section id="referrals" class="section" aria-labelledby="referrals-title">
-      <div class="container">
-        <div class="two-col">
-          <div class="card pad reveal">
-            <div class="section-kicker">Referral sources</div>
-            <h2 id="referrals-title">Fast, clear next steps for placement review.</h2>
-            <p class="lead">Referral partners can send information by secure online referral or secure fax. Evergreen responds quickly to reduce discharge delays and service gaps.</p>
-            <div class="process">
-              <div class="process-item"><div><h3>Submit referral information</h3><p class="lead">Use the secure online referral form or fax referral documents to <strong>(763) 762-6132</strong>.</p></div></div>
-              <div class="process-item"><div><h3>Schedule tour or assessment</h3><p class="lead">We coordinate quickly with families, case managers, and discharge planners.</p></div></div>
-              <div class="process-item"><div><h3>Receive a clear fit decision</h3><p class="lead">Evergreen reviews care needs, payer source, safety needs, and available placement fit.</p></div></div>
-            </div>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer" onclick="trackEvent('referral_click','conversion','referral_section_form');">🔒 Secure Referral Form</a>
-              <button class="btn btn-secondary copy-fax" type="button" data-copy="763-762-6132">Copy Fax Number</button>
+      <div class="hero-media reveal" aria-label="Evergreen resident bedroom photo">
+        <img src="images/resident-room-wood-bed.jpg" alt="Bright comfortable resident bedroom at Evergreen Home Healthcare Services in Coon Rapids" width="1200" height="900" loading="eager" decoding="async" />
+        <div class="hero-badge">5-Bed Premium Setting</div>
+        <div class="hero-card" aria-label="Evergreen highlights">
+          <div class="metric"><strong>24/7</strong><span>Staff support</span></div>
+          <div class="metric"><strong>RN</strong><span>Led oversight</span></div>
+          <div class="metric"><strong>Fast</strong><span>Referrals &amp; tours</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trust-strip reveal" role="list" aria-label="Why families and referral partners choose Evergreen">
+      <div class="trust-item" role="listitem"><strong>Small 5-Bed Home</strong><span>More attention, comfort, and consistency.</span></div>
+      <div class="trust-item" role="listitem"><strong>Secure Referral Options</strong><span>Online referral and secure fax available.</span></div>
+      <div class="trust-item" role="listitem"><strong>RN-Led Oversight</strong><span>Professional coordination and medication support.</span></div>
+      <div class="trust-item" role="listitem"><strong>Fast Placement Review</strong><span>Quick tours, assessments, and clear decisions.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section" aria-labelledby="services-title">
+  <div class="container">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-kicker">Care &amp; services</div>
+        <h2 id="services-title">Built around safety, dignity, structure, and consistency.</h2>
+      </div>
+      <p class="lead">Evergreen is designed for residents who benefit from a calm home, reliable staffing, and individualized daily support.</p>
+    </div>
+
+    <div class="three-col">
+      <article class="feature-card reveal">
+        <div class="icon" aria-hidden="true">♡</div>
+        <h3>Resident-Centered Daily Care</h3>
+        <p class="lead">Care plans are built around the resident’s needs, routines, preferences, safety risks, and level of independence.</p>
+        <ul class="checklist">
+          <li>Bathing, dressing, grooming, toileting, meals</li>
+          <li>Transfer and mobility support</li>
+          <li>Daily structure and monitoring</li>
+        </ul>
+      </article>
+
+      <article class="feature-card reveal">
+        <div class="icon" aria-hidden="true">⚕</div>
+        <h3>RN-Led Coordination</h3>
+        <p class="lead">Professional oversight supports medication management, health monitoring, provider communication, and care-plan updates.</p>
+        <ul class="checklist">
+          <li>Medication administration support</li>
+          <li>Monitoring and condition reporting</li>
+          <li>Hospice and provider coordination</li>
+        </ul>
+      </article>
+
+      <article class="feature-card reveal">
+        <div class="icon" aria-hidden="true">⌂</div>
+        <h3>Small-Home Environment</h3>
+        <p class="lead">A residential setting helps residents feel known, seen, and comfortable while supporting safety and supervision.</p>
+        <ul class="checklist">
+          <li>Peaceful home-like atmosphere</li>
+          <li>Accessible ramp entry</li>
+          <li>Respectful activities and routines</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="referrals" class="section" aria-labelledby="referrals-title">
+  <div class="container">
+    <div class="two-col">
+      <div class="card pad reveal">
+        <div class="section-kicker">Referral sources</div>
+        <h2 id="referrals-title">Fast, clear next steps for placement review.</h2>
+        <p class="lead">Referral partners can send information by secure online referral or secure fax. Evergreen responds quickly to reduce discharge delays and service gaps.</p>
+
+        <div class="process">
+          <div class="process-item">
+            <div>
+              <h3>Submit referral information</h3>
+              <p class="lead">Use the secure online referral form or fax referral documents to <strong>(763) 762-6132</strong>.</p>
             </div>
           </div>
-
-          <div class="card pad reveal">
-            <div class="section-kicker">Accepted payers</div>
-            <h2>Flexible pathways for families and referrals.</h2>
-            <ul class="checklist">
-              <li><strong>Private pay</strong> families seeking a high-attention small-home setting</li>
-              <li><strong>Long-term care insurance</strong> coordination when applicable</li>
-              <li><strong>CADI &amp; BI waiver</strong> referrals</li>
-              <li><strong>EW supportive</strong> placement review when appropriate</li>
-            </ul>
-            <div class="fax-callout" style="margin-top:18px;">
-              <div>
-                <strong>Direct contact</strong>
-                <span>Phone: (320) 469-7560<br />Email: marie@evergreenhomehcs.com</span>
-              </div>
+          <div class="process-item">
+            <div>
+              <h3>Schedule tour or assessment</h3>
+              <p class="lead">We coordinate quickly with families, case managers, and discharge planners.</p>
+            </div>
+          </div>
+          <div class="process-item">
+            <div>
+              <h3>Receive a clear fit decision</h3>
+              <p class="lead">Evergreen reviews care needs, payer source, safety needs, and available placement fit.</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section id="accessibility" class="section" aria-labelledby="accessibility-title">
-      <div class="container">
-        <div class="two-col">
-          <div class="card pad reveal">
-            <div class="section-kicker">Accessibility</div>
-            <h2 id="accessibility-title">Wheelchair ramp + step-free access.</h2>
-            <p class="lead">Evergreen supports residents who benefit from safer entry, smoother transfers, and a more manageable small-home layout.</p>
-            <ul class="checklist">
-              <li><strong>Wheelchair ramp installed</strong> for step-free access</li>
-              <li><strong>Handrails and stable decking</strong> for safer movement</li>
-              <li><strong>24/7 staffing</strong> for support and monitoring</li>
-            </ul>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer" onclick="trackEvent('referral_click','conversion','accessibility_assessment');">Request Assessment</a>
-              <a class="btn btn-secondary" href="refer.html">Refer a Resident</a>
-            </div>
-          </div>
-          <div class="card pad reveal">
-            <div class="section-kicker">Service area</div>
-            <h2>Serving families and referral partners across the Twin Cities region.</h2>
-            <p class="lead">Evergreen serves residents and referral partners throughout <strong>Anoka, Hennepin, Ramsey, Washington, Dakota, Sherburne, and Wright</strong> counties.</p>
-            <p class="lead" style="margin-top:12px;">If you are unsure whether a placement fits, submit a referral and Evergreen will review the information quickly.</p>
-          </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer" onclick="trackEvent('referral_click','conversion','referral_section_form');">🔒 Secure Referral Form</a>
+          <button class="btn btn-secondary copy-fax" type="button" data-copy="763-762-6132">Copy Fax Number</button>
         </div>
       </div>
-    </section>
 
-    <section id="tour" class="section" aria-labelledby="tour-title">
-      <div class="container">
-        <div class="section-header reveal">
+      <div class="card pad reveal">
+        <div class="section-kicker">Accepted payers</div>
+        <h2>Flexible pathways for families and referrals.</h2>
+        <ul class="checklist">
+          <li><strong>Private pay</strong> families seeking a high-attention small-home setting</li>
+          <li><strong>Long-term care insurance</strong> coordination when applicable</li>
+          <li><strong>CADI &amp; BI waiver</strong> referrals</li>
+          <li><strong>EW supportive</strong> placement review when appropriate</li>
+        </ul>
+
+        <div class="fax-callout" style="margin-top:18px;">
           <div>
-            <div class="section-kicker">Photo tour</div>
-            <h2 id="tour-title">A calm, clean, comfortable home residents can settle into.</h2>
+            <strong>Direct contact</strong>
+            <span>
+              Phone: (320) 469-7560<br />
+              Marie: marie@evergreenhomehcs.com<br />
+              General: evergreenhomehcs@gmail.com
+            </span>
           </div>
-          <p class="lead">Use the slideshow controls or click any gallery photo to view it larger.</p>
         </div>
 
-        <div class="slider-wrap reveal" aria-label="Evergreen photo slideshow">
-          <div class="dots" id="sliderDots" aria-label="Slideshow pagination"></div>
-          <div class="slider-controls" aria-label="Slideshow controls">
-            <button type="button" id="prevSlide" aria-label="Previous slide">‹</button>
-            <button type="button" id="nextSlide" aria-label="Next slide">›</button>
-          </div>
-          <div class="slider" id="slider" aria-live="polite">
-            <figure class="slide active">
-              <img src="images/ramp-01.jpg" alt="Wheelchair ramp at Evergreen front entrance" loading="lazy" decoding="async" />
-              <figcaption class="caption"><div><strong>Step-free ramp access</strong><span>Safer entry for residents using mobility devices.</span></div></figcaption>
-            </figure>
-            <figure class="slide">
-              <img src="images/ramp-02.jpg" alt="Side view of accessible ramp with handrails" loading="lazy" decoding="async" />
-              <figcaption class="caption"><div><strong>Accessible handrails</strong><span>Stable decking and supportive railings for safer movement.</span></div></figcaption>
-            </figure>
-            <figure class="slide">
-              <img src="images/1_Evergreen_Curbview_Main.jpg" alt="Front curb view of Evergreen home" loading="lazy" decoding="async" />
-              <figcaption class="caption"><div><strong>Residential home setting</strong><span>A peaceful small-home environment in Coon Rapids.</span></div></figcaption>
-            </figure>
-            <figure class="slide">
-              <img src="images/3_Evergreen_Dining_Table_Bright.jpg" alt="Dining area with bright natural light" loading="lazy" decoding="async" />
-              <figcaption class="caption"><div><strong>Bright dining area</strong><span>Comfortable daily routines in a home-like setting.</span></div></figcaption>
-            </figure>
-            <figure class="slide">
-              <img src="images/7_Evergreen_LivingRoom_Candles.jpg" alt="Living room with seating and decor" loading="lazy" decoding="async" />
-              <figcaption class="caption"><div><strong>Welcoming common space</strong><span>Warm shared areas for comfort, conversation, and connection.</span></div></figcaption>
-            </figure>
-            <figure class="slide">
-              <img src="images/9_Evergreen_Patio_Main.jpg" alt="Patio with outdoor seating" loading="lazy" decoding="async" />
-              <figcaption class="caption"><div><strong>Outdoor patio area</strong><span>Fresh air and calm outdoor space when appropriate.</span></div></figcaption>
-            </figure>
-          </div>
+        <div class="hero-actions">
+          <a class="btn btn-secondary" href="mailto:marie@evergreenhomehcs.com?cc=evergreenhomehcs@gmail.com&subject=Evergreen%20Referral%20Question">Email Marie + Evergreen</a>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="gallery" class="section" aria-labelledby="gallery-title">
-      <div class="container">
-        <div class="section-header reveal">
-          <div>
-            <div class="section-kicker">Home gallery</div>
-            <h2 id="gallery-title">Explore resident rooms, shared spaces, accessibility, and daily living areas.</h2>
-          </div>
-        </div>
-        <div class="gallery reveal" id="galleryGrid">
-          <button type="button" data-src="images/ramp-04.jpg" data-caption="Ramp entry transition from driveway"><img src="images/ramp-04.jpg" alt="Ramp entry transition from driveway" loading="lazy" decoding="async" /></button>
-          <button type="button" data-src="images/ramp-05.jpg" data-caption="Ramp view from deck looking toward driveway"><img src="images/ramp-05.jpg" alt="Ramp view from deck looking toward driveway" loading="lazy" decoding="async" /></button>
-          <button type="button" data-src="images/ramp-06.jpg" data-caption="Ramp handrail detail with vertical balusters"><img src="images/ramp-06.jpg" alt="Ramp handrail detail with vertical balusters" loading="lazy" decoding="async" /></button>
-          <button type="button" data-src="images/bedroom-1.jpg" data-caption="Resident bedroom with natural light"><img src="images/bedroom-1.jpg" alt="Resident bedroom with natural light" loading="lazy" decoding="async" /></button>
-          <button type="button" data-src="images/resident-room-wood-bed.jpg" data-caption="Resident bedroom with wood bed"><img src="images/resident-room-wood-bed.jpg" alt="Resident bedroom with wood bed" loading="lazy" decoding="async" /></button>
-          <button type="button" data-src="images/resident-room-white-bed.jpg" data-caption="Resident bedroom with white bed"><img src="images/resident-room-white-bed.jpg" alt="Resident bedroom with white bed" loading="lazy" decoding="async" /></button>
-          <button type="button" data-src="images/resident-room-pink-bedding.jpg" data-caption="Resident bedroom with pink bedding"><img src="images/resident-room-pink-bedding.jpg" alt="Resident bedroom with pink bedding" loading="lazy" decoding="async" /></button>
-          <button type="button" data-src="images/resident-bathroom.jpg" data-caption="Resident bathroom"><img src="images/resident-bathroom.jpg" alt="Resident bathroom" loading="lazy" decoding="async" /></button>
-          <button type="button" data-src="images/kitchen-modern.jpg" data-caption="Modern kitchen"><img src="images/kitchen-modern.jpg" alt="Modern kitchen" loading="lazy" decoding="async" /></button>
-          <button type="button" data-src="images/dining-area.jpg" data-caption="Dining area"><img src="images/dining-area.jpg" alt="Dining area" loading="lazy" decoding="async" /></button>
-          <button type="button" data-src="images/living-room-main.jpg" data-caption="Living room main view"><img src="images/living-room-main.jpg" alt="Living room main view" loading="lazy" decoding="async" /></button>
-          <button type="button" data-src="images/living-room-alt.jpg" data-caption="Living room alternate view"><img src="images/living-room-alt.jpg" alt="Living room alternate view" loading="lazy" decoding="async" /></button>
-          <button type="button" data-src="images/common-area.jpg" data-caption="Common area and office"><img src="images/common-area.jpg" alt="Common area and office" loading="lazy" decoding="async" /></button>
+<section id="accessibility" class="section" aria-labelledby="accessibility-title">
+  <div class="container">
+    <div class="two-col">
+      <div class="card pad reveal">
+        <div class="section-kicker">Accessibility</div>
+        <h2 id="accessibility-title">Wheelchair ramp + step-free access.</h2>
+        <p class="lead">Evergreen supports residents who benefit from safer entry, smoother transfers, and a more manageable small-home layout.</p>
+        <ul class="checklist">
+          <li><strong>Wheelchair ramp installed</strong> for step-free access</li>
+          <li><strong>Handrails and stable decking</strong> for safer movement</li>
+          <li><strong>24/7 staffing</strong> for support and monitoring</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer" onclick="trackEvent('referral_click','conversion','accessibility_assessment');">Request Assessment</a>
+          <a class="btn btn-secondary" href="refer.html">Refer a Resident</a>
         </div>
       </div>
-    </section>
 
-    <section id="families" class="section" aria-labelledby="families-title">
-      <div class="container">
-        <div class="card pad testimonial reveal">
-          <img class="avatar" src="images/testimonial-wife.jpg" alt="Audrey Zurn, family testimonial" loading="lazy" decoding="async" />
-          <div>
-            <div class="section-kicker">Family feedback</div>
-            <h2 id="families-title">Families want peace of mind. Evergreen is built for that.</h2>
-            <blockquote>“Evergreen took care of my husband with compassion, dignity, and love. The staff treated us like family and gave me peace of mind every day.”</blockquote>
-            <div class="byline">— Audrey Zurn, wife of a former resident</div>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer" onclick="trackEvent('referral_click','conversion','testimonial_referral');">Send Referral</a>
-              <a class="btn btn-secondary" href="tel:+13204697560" onclick="trackEvent('call_click','contact','testimonial_call');">Call Evergreen</a>
-            </div>
-          </div>
-        </div>
+      <div class="card pad reveal">
+        <div class="section-kicker">Service area</div>
+        <h2>Serving families and referral partners across the Twin Cities region.</h2>
+        <p class="lead">Evergreen serves residents and referral partners throughout <strong>Anoka, Hennepin, Ramsey, Washington, Dakota, Sherburne, and Wright</strong> counties.</p>
+        <p class="lead" style="margin-top:12px;">If you are unsure whether a placement fits, submit a referral and Evergreen will review the information quickly.</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="values" class="section" aria-labelledby="values-title">
-      <div class="container">
-        <div class="two-col">
-          <div class="card pad reveal">
-            <div class="section-kicker">Mission</div>
-            <h2 id="values-title">Care that protects dignity and honors the person.</h2>
-            <p class="lead">Our mission is to provide compassionate, individualized care that enhances the quality of life for every resident we serve.</p>
-            <h3 style="margin-top:18px;">Vision</h3>
-            <p class="lead">To be a trusted and respected provider of assisted living services, known for excellence, integrity, and heart-centered care.</p>
-          </div>
-          <div class="card pad reveal">
-            <div class="section-kicker">Values</div>
-            <ul class="checklist">
-              <li><strong>Compassion</strong> — We care deeply for residents and families.</li>
-              <li><strong>Respect</strong> — We honor dignity, privacy, and choice.</li>
-              <li><strong>Excellence</strong> — We commit to high standards every day.</li>
-              <li><strong>Integrity</strong> — We do the right thing, always.</li>
-              <li><strong>Family-Centered</strong> — We treat residents like our own family.</li>
-            </ul>
-          </div>
-        </div>
+<section id="tour" class="section" aria-labelledby="tour-title">
+  <div class="container">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-kicker">Photo tour</div>
+        <h2 id="tour-title">A calm, clean, comfortable home residents can settle into.</h2>
       </div>
-    </section>
+      <p class="lead">Use the slideshow controls or click any gallery photo to view it larger.</p>
+    </div>
 
-    <section class="section" aria-labelledby="faq-title">
-      <div class="container">
-        <div class="section-header reveal">
-          <div>
-            <div class="section-kicker">Common questions</div>
-            <h2 id="faq-title">Helpful answers for families and referral partners.</h2>
-          </div>
-        </div>
-        <div class="faq reveal">
-          <details>
-            <summary>How do referral sources send documents?</summary>
-            <p>Referral sources may use the secure online referral form or send referral documents by secure fax to <strong>(763) 762-6132</strong>.</p>
-          </details>
-          <details>
-            <summary>How quickly can Evergreen review a placement?</summary>
-            <p>Evergreen works quickly with families, case managers, social workers, and discharge planners to determine fit, schedule tours, and complete assessment steps.</p>
-          </details>
-          <details>
-            <summary>What type of setting is Evergreen?</summary>
-            <p>Evergreen is a small 5-bed assisted living home in Coon Rapids, Minnesota, designed for residents who benefit from a calm home-like setting and consistent support.</p>
-          </details>
-          <details>
-            <summary>Which payer sources are listed for review?</summary>
-            <p>Evergreen accepts private pay, long-term care insurance, CADI, BI, and EW supportive referrals when the resident’s needs and placement fit are appropriate.</p>
-          </details>
-        </div>
+    <div class="slider-wrap reveal" aria-label="Evergreen photo slideshow">
+      <div class="dots" id="sliderDots" aria-label="Slideshow pagination"></div>
+      <div class="slider-controls" aria-label="Slideshow controls">
+        <button type="button" id="prevSlide" aria-label="Previous slide">‹</button>
+        <button type="button" id="nextSlide" aria-label="Next slide">›</button>
       </div>
-    </section>
 
-    <section class="section" aria-label="Social media">
-      <div class="container">
-        <div class="social-grid">
-          <div class="card pad embed-card reveal">
-            <h2>Featured on LinkedIn</h2>
-            <iframe title="Evergreen LinkedIn featured post" src="https://www.linkedin.com/embed/feed/update/urn:li:share:7331871369208492032" height="360" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-          <div class="card pad embed-card reveal">
-            <h2>Follow Us on Facebook</h2>
-            <div id="fb-root"></div>
-            <div class="fb-page" data-href="https://www.facebook.com/evergreenhomehcs/" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-              <blockquote cite="https://www.facebook.com/evergreenhomehcs/" class="fb-xfbml-parse-ignore">
-                <a href="https://www.facebook.com/evergreenhomehcs/">Evergreen Home Healthcare Services</a>
-              </blockquote>
-            </div>
-          </div>
-        </div>
+      <div class="slider" id="slider" aria-live="polite">
+        <figure class="slide active">
+          <img src="images/ramp-01.jpg" alt="Wheelchair ramp at Evergreen front entrance" loading="lazy" decoding="async" />
+          <figcaption class="caption"><div><strong>Step-free ramp access</strong><span>Safer entry for residents using mobility devices.</span></div></figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="images/ramp-02.jpg" alt="Side view of accessible ramp with handrails" loading="lazy" decoding="async" />
+          <figcaption class="caption"><div><strong>Accessible handrails</strong><span>Stable decking and supportive railings for safer movement.</span></div></figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="images/1_Evergreen_Curbview_Main.jpg" alt="Front curb view of Evergreen home" loading="lazy" decoding="async" />
+          <figcaption class="caption"><div><strong>Residential home setting</strong><span>A peaceful small-home environment in Coon Rapids.</span></div></figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="images/3_Evergreen_Dining_Table_Bright.jpg" alt="Dining area with bright natural light" loading="lazy" decoding="async" />
+          <figcaption class="caption"><div><strong>Bright dining area</strong><span>Comfortable daily routines in a home-like setting.</span></div></figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="images/7_Evergreen_LivingRoom_Candles.jpg" alt="Living room with seating and decor" loading="lazy" decoding="async" />
+          <figcaption class="caption"><div><strong>Welcoming common space</strong><span>Warm shared areas for comfort, conversation, and connection.</span></div></figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="images/9_Evergreen_Patio_Main.jpg" alt="Patio with outdoor seating" loading="lazy" decoding="async" />
+          <figcaption class="caption"><div><strong>Outdoor patio area</strong><span>Fresh air and calm outdoor space when appropriate.</span></div></figcaption>
+        </figure>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="section" aria-label="Contact Evergreen">
-      <div class="container">
-        <div class="cta-band reveal">
-          <div class="section-kicker" style="color:#f4d47a;">Talk with Evergreen today</div>
-          <h2>Determine fit quickly and move the referral forward with confidence.</h2>
-          <p class="lead">Whether you are a family member, case manager, social worker, or discharge planner, Evergreen can help you review placement fit clearly and quickly.</p>
-          <div class="contact-grid">
-            <a class="contact-card" href="tel:+13204697560" onclick="trackEvent('call_click','contact','finalcta_call');"><strong>Phone</strong><span>(320) 469-7560</span></a>
-            <button class="contact-card copy-fax" type="button" data-copy="763-762-6132" style="text-align:left;cursor:pointer;"><strong>Secure Fax</strong><span>(763) 762-6132</span></button>
-            <a class="contact-card" href="mailto:marie@evergreenhomehcs.com?subject=Evergreen%20Tour%20or%20Placement%20Inquiry" onclick="trackEvent('email_click','contact','finalcta_email');"><strong>Email</strong><span>marie@evergreenhomehcs.com</span></a>
-          </div>
-          <div class="hero-actions" style="margin-bottom:0;">
-            <a class="btn btn-gold" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer" onclick="trackEvent('referral_click','conversion','finalcta_secure_referral');">Submit Secure Referral</a>
-            <a class="btn btn-secondary" href="refer.html">Refer a Resident</a>
-          </div>
+<section id="gallery" class="section" aria-labelledby="gallery-title">
+  <div class="container">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-kicker">Home gallery</div>
+        <h2 id="gallery-title">Explore resident rooms, shared spaces, accessibility, and daily living areas.</h2>
+      </div>
+    </div>
+
+    <div class="gallery reveal" id="galleryGrid">
+      <button type="button" data-src="images/ramp-04.jpg" data-caption="Ramp entry transition from driveway"><img src="images/ramp-04.jpg" alt="Ramp entry transition from driveway" loading="lazy" decoding="async" /></button>
+      <button type="button" data-src="images/ramp-05.jpg" data-caption="Ramp view from deck looking toward driveway"><img src="images/ramp-05.jpg" alt="Ramp view from deck looking toward driveway" loading="lazy" decoding="async" /></button>
+      <button type="button" data-src="images/ramp-06.jpg" data-caption="Ramp handrail detail with vertical balusters"><img src="images/ramp-06.jpg" alt="Ramp handrail detail with vertical balusters" loading="lazy" decoding="async" /></button>
+      <button type="button" data-src="images/bedroom-1.jpg" data-caption="Resident bedroom with natural light"><img src="images/bedroom-1.jpg" alt="Resident bedroom with natural light" loading="lazy" decoding="async" /></button>
+      <button type="button" data-src="images/resident-room-wood-bed.jpg" data-caption="Resident bedroom with wood bed"><img src="images/resident-room-wood-bed.jpg" alt="Resident bedroom with wood bed" loading="lazy" decoding="async" /></button>
+      <button type="button" data-src="images/resident-room-white-bed.jpg" data-caption="Resident bedroom with white bed"><img src="images/resident-room-white-bed.jpg" alt="Resident bedroom with white bed" loading="lazy" decoding="async" /></button>
+      <button type="button" data-src="images/resident-room-pink-bedding.jpg" data-caption="Resident bedroom with pink bedding"><img src="images/resident-room-pink-bedding.jpg" alt="Resident bedroom with pink bedding" loading="lazy" decoding="async" /></button>
+      <button type="button" data-src="images/resident-bathroom.jpg" data-caption="Resident bathroom"><img src="images/resident-bathroom.jpg" alt="Resident bathroom" loading="lazy" decoding="async" /></button>
+      <button type="button" data-src="images/kitchen-modern.jpg" data-caption="Modern kitchen"><img src="images/kitchen-modern.jpg" alt="Modern kitchen" loading="lazy" decoding="async" /></button>
+      <button type="button" data-src="images/dining-area.jpg" data-caption="Dining area"><img src="images/dining-area.jpg" alt="Dining area" loading="lazy" decoding="async" /></button>
+      <button type="button" data-src="images/living-room-main.jpg" data-caption="Living room main view"><img src="images/living-room-main.jpg" alt="Living room main view" loading="lazy" decoding="async" /></button>
+      <button type="button" data-src="images/living-room-alt.jpg" data-caption="Living room alternate view"><img src="images/living-room-alt.jpg" alt="Living room alternate view" loading="lazy" decoding="async" /></button>
+      <button type="button" data-src="images/common-area.jpg" data-caption="Common area and office"><img src="images/common-area.jpg" alt="Common area and office" loading="lazy" decoding="async" /></button>
+    </div>
+  </div>
+</section>
+
+<section id="families" class="section" aria-labelledby="families-title">
+  <div class="container">
+    <div class="card pad testimonial reveal">
+      <img class="avatar" src="images/testimonial-wife.jpg" alt="Audrey Zurn, family testimonial" loading="lazy" decoding="async" />
+      <div>
+        <div class="section-kicker">Family feedback</div>
+        <h2 id="families-title">Families want peace of mind. Evergreen is built for that.</h2>
+        <blockquote>“Evergreen took care of my husband with compassion, dignity, and love. The staff treated us like family and gave me peace of mind every day.”</blockquote>
+        <div class="byline">— Audrey Zurn, wife of a former resident</div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer" onclick="trackEvent('referral_click','conversion','testimonial_referral');">Send Referral</a>
+          <a class="btn btn-secondary" href="tel:+13204697560" onclick="trackEvent('call_click','contact','testimonial_call');">Call Evergreen</a>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+<section id="values" class="section" aria-labelledby="values-title">
+  <div class="container">
+    <div class="two-col">
+      <div class="card pad reveal">
+        <div class="section-kicker">Mission</div>
+        <h2 id="values-title">Care that protects dignity and honors the person.</h2>
+        <p class="lead">Our mission is to provide compassionate, individualized care that enhances the quality of life for every resident we serve.</p>
+        <h3 style="margin-top:18px;">Vision</h3>
+        <p class="lead">To be a trusted and respected provider of assisted living services, known for excellence, integrity, and heart-centered care.</p>
+      </div>
+
+      <div class="card pad reveal">
+        <div class="section-kicker">Values</div>
+        <ul class="checklist">
+          <li><strong>Compassion</strong> — We care deeply for residents and families.</li>
+          <li><strong>Respect</strong> — We honor dignity, privacy, and choice.</li>
+          <li><strong>Excellence</strong> — We commit to high standards every day.</li>
+          <li><strong>Integrity</strong> — We do the right thing, always.</li>
+          <li><strong>Family-Centered</strong> — We treat residents like our own family.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-kicker">Common questions</div>
+        <h2 id="faq-title">Helpful answers for families and referral partners.</h2>
+      </div>
+    </div>
+
+    <div class="faq reveal">
+      <details>
+        <summary>How do referral sources send documents?</summary>
+        <p>Referral sources may use the secure online referral form or send referral documents by secure fax to <strong>(763) 762-6132</strong>. They may also contact Evergreen by email at <strong>marie@evergreenhomehcs.com</strong> or <strong>evergreenhomehcs@gmail.com</strong>.</p>
+      </details>
+      <details>
+        <summary>How quickly can Evergreen review a placement?</summary>
+        <p>Evergreen works quickly with families, case managers, social workers, and discharge planners to determine fit, schedule tours, and complete assessment steps.</p>
+      </details>
+      <details>
+        <summary>What type of setting is Evergreen?</summary>
+        <p>Evergreen is a small 5-bed assisted living home in Coon Rapids, Minnesota, designed for residents who benefit from a calm home-like setting and consistent support.</p>
+      </details>
+      <details>
+        <summary>Which payer sources are listed for review?</summary>
+        <p>Evergreen accepts private pay, long-term care insurance, CADI, BI, and EW supportive referrals when the resident’s needs and placement fit are appropriate.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-label="Social media">
+  <div class="container">
+    <div class="social-grid">
+      <div class="card pad embed-card reveal">
+        <h2>Featured on LinkedIn</h2>
+        <iframe title="Evergreen LinkedIn featured post" src="https://www.linkedin.com/embed/feed/update/urn:li:share:7331871369208492032" height="360" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <div class="card pad embed-card reveal">
+        <h2>Follow Us on Facebook</h2>
+
+        <div class="facebook-fallback">
+          <div class="fb-fallback-card">
+            <img src="logo.png" alt="Evergreen Home Healthcare Services logo" width="96" height="96" loading="lazy" decoding="async" />
+            <h3>Evergreen Home Healthcare Services</h3>
+            <p>Follow Evergreen on Facebook for updates, photos, announcements, and helpful information for families and referral partners.</p>
+            <a class="btn btn-primary" href="https://www.facebook.com/evergreenhomehcs/" target="_blank" rel="noopener noreferrer" onclick="trackEvent('facebook_click','social','facebook_fallback_button');">Visit Our Facebook Page</a>
+          </div>
+        </div>
+
+        <div id="fb-root"></div>
+        <div class="fb-page" data-href="https://www.facebook.com/evergreenhomehcs/" data-tabs="timeline" data-width="500" data-height="420" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <blockquote cite="https://www.facebook.com/evergreenhomehcs/" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/evergreenhomehcs/">Evergreen Home Healthcare Services</a>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-label="Contact Evergreen">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div class="section-kicker" style="color:#f4d47a;">Talk with Evergreen today</div>
+      <h2>Determine fit quickly and move the referral forward with confidence.</h2>
+      <p class="lead">Whether you are a family member, case manager, social worker, or discharge planner, Evergreen can help you review placement fit clearly and quickly.</p>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="tel:+13204697560" onclick="trackEvent('call_click','contact','finalcta_call');"><strong>Phone</strong><span>(320) 469-7560</span></a>
+        <button class="contact-card copy-fax" type="button" data-copy="763-762-6132" style="text-align:left;cursor:pointer;"><strong>Secure Fax</strong><span>(763) 762-6132</span></button>
+        <a class="contact-card" href="mailto:marie@evergreenhomehcs.com?cc=evergreenhomehcs@gmail.com&subject=Evergreen%20Tour%20or%20Placement%20Inquiry" onclick="trackEvent('email_click','contact','finalcta_email_marie');"><strong>Marie Email</strong><span>marie@evergreenhomehcs.com</span></a>
+        <a class="contact-card" href="mailto:evergreenhomehcs@gmail.com?cc=marie@evergreenhomehcs.com&subject=Evergreen%20Inquiry" onclick="trackEvent('email_click','contact','finalcta_email_general');"><strong>General Email</strong><span>evergreenhomehcs@gmail.com</span></a>
+      </div>
+
+      <div class="hero-actions" style="margin-bottom:0;">
+        <a class="btn btn-gold" href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer" onclick="trackEvent('referral_click','conversion','finalcta_secure_referral');">Submit Secure Referral</a>
+        <a class="btn btn-secondary" href="refer.html">Refer a Resident</a>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
   </main>
 
   <footer>
@@ -734,23 +1526,29 @@
           <span class="muted">Quality Care in a Home-Like Setting</span><br />
           <span class="muted">2621 S Heights Dr NW, Coon Rapids, MN 55433</span>
         </div>
-        <div class="footer-links">
-          <strong>Contact</strong>
-          <a href="tel:+13204697560">Phone: (320) 469-7560</a>
-          <span>Secure Fax: (763) 762-6132</span>
-          <a href="mailto:evergreenhomehcs@gmail.com">evergreenhomehcs@gmail.com</a>
-          <a href="mailto:marie@evergreenhomehcs.com">marie@evergreenhomehcs.com</a>
-        </div>
-        <div class="footer-links">
-          <strong>Quick Links</strong>
-          <a href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer">Secure Referral</a>
-          <a href="refer.html">Refer a Resident</a>
-          <a href="intake.html">Resident Intake</a>
-          <a href="careers.html">Careers</a>
-          <span class="muted">© 2026 Evergreen Home Healthcare Services</span>
-        </div>
-      </div>
+
+```
+    <div class="footer-links">
+      <strong>Contact</strong>
+      <a href="tel:+13204697560">Phone: (320) 469-7560</a>
+      <span>Secure Fax: (763) 762-6132</span>
+      <a href="mailto:marie@evergreenhomehcs.com?cc=evergreenhomehcs@gmail.com&subject=Evergreen%20Inquiry">Marie: marie@evergreenhomehcs.com</a>
+      <a href="mailto:evergreenhomehcs@gmail.com?cc=marie@evergreenhomehcs.com&subject=Evergreen%20Inquiry">General: evergreenhomehcs@gmail.com</a>
     </div>
+
+    <div class="footer-links">
+      <strong>Quick Links</strong>
+      <a href="https://bit.ly/evergreen-referral" target="_blank" rel="noopener noreferrer">Secure Referral</a>
+      <a href="refer.html">Refer a Resident</a>
+      <a href="intake.html">Resident Intake</a>
+      <a href="careers.html">Careers</a>
+      <a href="https://www.facebook.com/evergreenhomehcs/" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <span class="muted">© 2026 Evergreen Home Healthcare Services</span>
+    </div>
+  </div>
+</div>
+```
+
   </footer>
 
   <div class="sticky-mobile" aria-label="Quick mobile contact actions">
@@ -783,14 +1581,19 @@
       toast.setAttribute('role','status');
       toast.style.cssText = 'position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(12px);background:#062e1f;color:#fff;padding:10px 14px;border-radius:999px;font-weight:900;box-shadow:0 18px 40px rgba(0,0,0,.22);z-index:100;opacity:0;transition:.2s ease;pointer-events:none;';
       document.body.appendChild(toast);
+
       function showToast(message){
         toast.textContent = message;
         toast.style.opacity = '1';
         toast.style.transform = 'translateX(-50%) translateY(0)';
-        setTimeout(() => { toast.style.opacity = '0'; toast.style.transform = 'translateX(-50%) translateY(12px)'; }, 1800);
+        setTimeout(function(){
+          toast.style.opacity = '0';
+          toast.style.transform = 'translateX(-50%) translateY(12px)';
+        }, 1800);
       }
-      document.querySelectorAll('.copy-fax').forEach(btn => {
-        btn.addEventListener('click', async () => {
+
+      document.querySelectorAll('.copy-fax').forEach(function(btn){
+        btn.addEventListener('click', async function(){
           const value = btn.getAttribute('data-copy') || '763-762-6132';
           try {
             if (navigator.clipboard && window.isSecureContext) {
@@ -820,33 +1623,39 @@
       const prev = document.getElementById('prevSlide');
       const next = document.getElementById('nextSlide');
       if(!slides.length || !dotsWrap) return;
+
       let index = 0;
       let timer;
       const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      slides.forEach((_, i) => {
+      slides.forEach(function(_, i){
         const dot = document.createElement('button');
         dot.type = 'button';
         dot.setAttribute('aria-label', 'Show slide ' + (i + 1));
-        dot.addEventListener('click', () => show(i, true));
+        dot.addEventListener('click', function(){ show(i, true); });
         dotsWrap.appendChild(dot);
       });
+
       const dots = Array.from(dotsWrap.querySelectorAll('button'));
 
       function show(i, userAction){
         index = (i + slides.length) % slides.length;
-        slides.forEach((slide, n) => slide.classList.toggle('active', n === index));
-        dots.forEach((dot, n) => dot.classList.toggle('active', n === index));
+        slides.forEach(function(slide, n){ slide.classList.toggle('active', n === index); });
+        dots.forEach(function(dot, n){ dot.classList.toggle('active', n === index); });
         if(userAction){ restart(); }
       }
+
       function advance(){ show(index + 1, false); }
+
       function restart(){
         if(reduced) return;
         clearInterval(timer);
         timer = setInterval(advance, 5200);
       }
-      prev && prev.addEventListener('click', () => show(index - 1, true));
-      next && next.addEventListener('click', () => show(index + 1, true));
+
+      if(prev) prev.addEventListener('click', function(){ show(index - 1, true); });
+      if(next) next.addEventListener('click', function(){ show(index + 1, true); });
+
       show(0, false);
       restart();
     })();
@@ -860,7 +1669,9 @@
       const prev = document.getElementById('prevPhoto');
       const next = document.getElementById('nextPhoto');
       if(!galleryButtons.length || !lightbox || !img || !caption) return;
+
       let index = 0;
+
       function open(i){
         index = (i + galleryButtons.length) % galleryButtons.length;
         const btn = galleryButtons[index];
@@ -869,19 +1680,28 @@
         caption.textContent = btn.dataset.caption || '';
         lightbox.classList.add('open');
         document.body.classList.add('no-scroll');
-        close && close.focus();
+        if(close) close.focus();
       }
+
       function hide(){
         lightbox.classList.remove('open');
         document.body.classList.remove('no-scroll');
         img.src = '';
       }
-      galleryButtons.forEach((btn, i) => btn.addEventListener('click', () => open(i)));
-      close && close.addEventListener('click', hide);
-      prev && prev.addEventListener('click', () => open(index - 1));
-      next && next.addEventListener('click', () => open(index + 1));
-      lightbox.addEventListener('click', (event) => { if(event.target === lightbox) hide(); });
-      document.addEventListener('keydown', (event) => {
+
+      galleryButtons.forEach(function(btn, i){
+        btn.addEventListener('click', function(){ open(i); });
+      });
+
+      if(close) close.addEventListener('click', hide);
+      if(prev) prev.addEventListener('click', function(){ open(index - 1); });
+      if(next) next.addEventListener('click', function(){ open(index + 1); });
+
+      lightbox.addEventListener('click', function(event){
+        if(event.target === lightbox) hide();
+      });
+
+      document.addEventListener('keydown', function(event){
         if(!lightbox.classList.contains('open')) return;
         if(event.key === 'Escape') hide();
         if(event.key === 'ArrowLeft') open(index - 1);
@@ -892,27 +1712,30 @@
     (function(){
       const items = Array.from(document.querySelectorAll('.reveal'));
       if(!items.length) return;
+
       if(!('IntersectionObserver' in window)){
-        items.forEach(item => item.classList.add('visible'));
+        items.forEach(function(item){ item.classList.add('visible'); });
         return;
       }
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+
+      const observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
           if(entry.isIntersecting){
             entry.target.classList.add('visible');
             observer.unobserve(entry.target);
           }
         });
       }, { threshold:.12, rootMargin:'0px 0px -30px 0px' });
-      items.forEach(item => observer.observe(item));
+
+      items.forEach(function(item){ observer.observe(item); });
     })();
 
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js').catch(() => {});
+      navigator.serviceWorker.register('/service-worker.js').catch(function(){});
     }
   </script>
 
-  <!-- Facebook SDK (deferred) -->
-  <script defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0"></script>
+
 </body>
 </html>
