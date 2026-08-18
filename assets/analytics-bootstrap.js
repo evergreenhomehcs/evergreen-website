@@ -1,0 +1,1 @@
+window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-9N7DMKYB3G',{anonymize_ip:true,transport_type:'beacon'});gtag('config','G-WF2QTET6GR',{anonymize_ip:true,transport_type:'beacon'});
