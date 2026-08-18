@@ -1,0 +1,5 @@
+Contact: mailto:marie@evergreenhomehcs.com
+Canonical: https://www.evergreenhomehcs.com/.well-known/security.txt
+Preferred-Languages: en
+Policy: https://www.evergreenhomehcs.com/
+Expires: 2027-08-18T23:59:59Z
